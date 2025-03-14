@@ -11,10 +11,11 @@ import gradright from "@/public/images/new-landing/grad-core-br.png"
 
 const CorePrinciple = () => {
     return (
-        <div className='relative px-5 bg-white overflow-hidden'>
+        <div className='relative px-5 bg-white '>
 
-            <Image className='h-full w-full absolute object-cover z-0' src={bg} alt="bg" />
-            <Image className=' w-full absolute  top-[-270px] z-10' src={gradtop} alt="gradtop" />
+            <Image className=' w-full left-0 absolute object-cover mx-auto top-[-270px] mob:top-[-3%] z-10' src={gradtop} alt="gradtop" width={1400} />
+           <div className="relative overflow-hidden">
+           <Image className='h-full w-full absolute object-cover z-0' src={bg} alt="bg" />
 
             <Image className='  absolute  right-0 bottom-[0px] z-10' src={gradright} alt="gradright" width={337} height={236} />
 
@@ -43,6 +44,7 @@ const CorePrinciple = () => {
                     </div>
                 </div>
             </div>
+           </div>
         </div>
     )
 }
