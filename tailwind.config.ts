@@ -8,10 +8,26 @@ const config: Config = {
   ],
   theme: {
     extend: {
-      backgroundImage: {
-        "gradient-radial": "radial-gradient(var(--tw-gradient-stops))",
-        "gradient-conic":
-          "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
+      fontFamily: {
+        montserrat: ["var(--font-montserrat)"],
+        inter: ["var(--font-inter)"],
+        timesNewRoman: ["var(--font-timesNewRoman)"],
+      },
+      boxShadow: {
+        'custom': '0px 4px 54px 0px rgba(102, 143, 165, 0.3)', // Custom shadow
+      },
+      colors: {
+        primary: "#30434D",
+        secondary: "#FFFFFF",
+        accentGreen: "#4FB848",
+      },
+      screens: {
+        "2xl": { max: "1535px" },
+        xl: { max: "1279px" },                      
+        lg: { max: "1023px" },
+        navsize: { max: "1180px" },
+        tab: { max: "991px" },
+        mob: { max: "768px" },
       },
     },
   },
