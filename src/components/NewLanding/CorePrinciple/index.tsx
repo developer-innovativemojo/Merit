@@ -33,8 +33,11 @@ const CorePrinciple = () => {
           height={236}
         />
 
-        <div className="max-w-[1300px] mx-auto pt-[100px] pb-16 relative z-0">
-          <Text as="h1" className="text-accentGreen text-[50px] mb-[24px]">
+        <div className="max-w-[1300px] mx-auto pt-[100px] mob:pt-[70px] pb-16 relative z-0">
+          <Text
+            as="h1"
+            className="text-accentGreen text-[50px] mb-[24px] mob:leading-[50px] mob:text-center"
+          >
             Core Principles of MERIT
           </Text>
           <Text className="text-[24px] font-inter max-w-[735px]">
@@ -43,9 +46,9 @@ const CorePrinciple = () => {
             to maximize efficiency and optimize strategic decision-making
             through
           </Text>
-          <div className="flex tab:flex-wrap w-full mt-[50px] items-start">
+          <div className="flex tab:flex-wrap w-full mt-[50px] mob:mt-[20px] items-start">
             <div className="max-w-[480px] space-y-[20px]">
-              <Text className="text-[24px] leading-[32px]  font-inter ">
+              <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter ">
                 {" "}
                 <span className="text-[#4FB848] font-bold">
                   M – Matching:
@@ -53,7 +56,7 @@ const CorePrinciple = () => {
                 Optimizing connections across processes, systems, and resources
                 to ensure the best outcomes.
               </Text>
-              <Text className="text-[24px] leading-[32px] font-inter ">
+              <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter ">
                 {" "}
                 <span className="text-[#4FB848] font-bold">
                   E – Efficiency:
@@ -62,14 +65,14 @@ const CorePrinciple = () => {
                 solutions and technology.​
               </Text>
 
-              <Text className="text-[24px] leading-[32px] font-inter ">
+              <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
                 {" "}
                 <span className="text-[#4FB848] font-bold">R – Results:</span>
                 Delivering measurable, impactful solutions that align with
                 organizational goals and objectives.​
               </Text>
 
-              <Text className="text-[24px] leading-[32px] font-inter ">
+              <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
                 {" "}
                 <span className="text-[#4FB848] font-bold">
                   I – Innovation:
@@ -77,7 +80,7 @@ const CorePrinciple = () => {
                 Leveraging cutting-edge tools and strategies to modernize
                 operations and improve performance.​
               </Text>
-              <Text className="text-[24px] leading-[32px] font-inter ">
+              <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
                 {" "}
                 <span className="text-[#4FB848] font-bold">
                   T – Technology:
@@ -89,14 +92,14 @@ const CorePrinciple = () => {
 
             <div className="flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full">
               <Image
-                className=" h-full max-h-[322px] w-auto"
+                className=" h-full max-h-[322px] w-auto mob:w-full"
                 src={slide1}
                 alt=""
                 width={486}
                 height={272}
               />
               <Image
-                className=" h-full max-h-[143px] mb-12 w-auto"
+                className=" h-full max-h-[143px] mb-12 w-auto mob:w-full"
                 src={slide2}
                 alt=""
                 width={257}
@@ -104,7 +107,7 @@ const CorePrinciple = () => {
               />
             </div>
           </div>
-          <Text className="mt-10 font-bold text-[24px] leading-[32px] font-inter max-w-[1050px] text-center mx-auto">
+          <Text className="mt-10 font-bold text-[24px] leading-[32px] mob:leading-[25px] font-inter max-w-[1050px] text-center mx-auto">
             <span className="text-[#4FB848] font-bold">MERIT</span> isn’t just a
             tool—it’s a{" "}
             <span className="text-[#4FB848] font-bold">

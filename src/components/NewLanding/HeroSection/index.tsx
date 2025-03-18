@@ -9,6 +9,8 @@ import cont from "@/public/images/new-landing/Container.png";
 import gradbl from "@/public/images/new-landing/gradbl.png";
 import gradbr from "@/public/images/new-landing/gradbr.png";
 import gradb from "@/public/images/new-landing/gradb.png";
+import left from "@/public/images/new-landing/Group 11.png";
+import right from "@/public/images/new-landing/Group 14.png";
 
 const HeroSection = () => {
   return (
@@ -17,15 +19,21 @@ const HeroSection = () => {
 
       <div className=" flex justify-center items-center h-full">
         <div className=" mx-auto space-y-[25px] relative z-20">
-          <Text as="h1" className="text-center font-inter text-[#30434D]">
+          <Text
+            as="h1"
+            className="text-center font-inter text-[#30434D] mob:text-[40px] mob:leading-[49px]"
+          >
             The
-            <span className="text-accentGreen">Smartest, Fastest Way</span> to
+            <span className="text-accentGreen"> Smartest, Fastest Way</span> to
             Find the Right
             <br />
             Partners & Resources to Win More Work
           </Text>
-
-          <Text className="text-accentGreen text-center font-bold text-[24px] font-inter">
+          <div className="mob:flex justify-between gap-[30px] w-full mt-[16px] mb-[88px] hidden">
+            <Image className="w-[158px]" src={right} alt="bg" />
+            <Image className="w-[155px]" src={left} alt="bg" />
+          </div>
+          <Text className="text-accentGreen text-center font-bold text-[24px]  font-inter">
             Faster Teaming. Smarter Matches. Better Business.
           </Text>
         </div>
@@ -37,7 +45,7 @@ const HeroSection = () => {
           height={358}
         />
         <Image
-          className="absolute z-0 mx-auto mt-[200px]"
+          className="absolute z-0 mx-auto mt-[200px] mob:hidden"
           src={cont}
           alt="bg"
           width={1493}

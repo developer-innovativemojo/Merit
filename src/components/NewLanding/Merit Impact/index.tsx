@@ -27,7 +27,7 @@ const MeritImapct = () => {
           {/* merit impact */}
           <Text
             as="h1"
-            className="text-[40px] mb-[80px] mt-0 text-center font-bold"
+            className="text-[40px] mb-[80px] mob:text-[40px] mt-0 text-center font-bold"
           >
             <span className="text-accentGreen">MERIT</span> Impact
           </Text>
@@ -71,7 +71,7 @@ const MeritImapct = () => {
           {/* merit capabilities */}
           <Text
             as="h1"
-            className="text-[40px] mb-[150px] mob:mb-8 mt-0 text-center font-bold text-accentGreen"
+            className="text-[40px] mob:text-[30px] mob:mt-[100px] mb-[150px] mob:mb-8 mt-0 text-center font-bold text-accentGreen"
           >
             MERIT’s <span className="text-black"> Capabilities</span> – Faster
             Teaming, Smarter Matching, and Better Business Development

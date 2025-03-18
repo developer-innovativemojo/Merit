@@ -24,7 +24,7 @@ const HowMeritFixes = () => {
         <div className="w-full">
           <Text
             as="h1"
-            className="text-[40px] my-[113px] text-center font-bold"
+            className="text-[40px] my-[113px] mob:my-10 text-center font-bold mob:text-[30px]"
           >
             How <span className="text-accentGreen">MERIT</span> Fixes Business
             Development—Instantly
