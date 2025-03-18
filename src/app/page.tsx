@@ -1,9 +1,13 @@
-import AboutSection from '@/components/NewLanding/AboutSection'
-import CorePrinciple from '@/components/NewLanding/CorePrinciple'
-import HeroSection from '@/components/NewLanding/HeroSection'
-import HowMerit from '@/components/NewLanding/HowMerit'
-import KeyCapabilities from '@/components/NewLanding/KeyCapabilities'
-import FooterLanding from '@/components/NewLanding/FooterLanding'
+import AboutSection from "@/components/NewLanding/AboutSection";
+import CorePrinciple from "@/components/NewLanding/CorePrinciple";
+import HeroSection from "@/components/NewLanding/HeroSection";
+import HowMerit from "@/components/NewLanding/HowMerit";
+import KeyCapabilities from "@/components/NewLanding/KeyCapabilities";
+import HowMeritFixes from "@/components/NewLanding/HowMeritFixes";
+import MeritImapct from "@/components/NewLanding/Merit Impact";
+import { ComparisonTable } from "@/components/NewLanding/MeritCompares";
+import ReadyToSee from "@/components/NewLanding/ReadyToSee";
+import FooterLanding from "@/components/NewLanding/FooterLanding";
 export default function Home() {
   return (
     <>
@@ -12,10 +16,11 @@ export default function Home() {
       <CorePrinciple />
       <HowMerit />
       <KeyCapabilities />
+      <HowMeritFixes />
+      <MeritImapct />
+      <ComparisonTable />
+      <ReadyToSee />
       <FooterLanding />
     </>
   );
 }
-
-
-
