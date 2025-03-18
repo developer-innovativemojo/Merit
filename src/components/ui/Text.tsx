@@ -13,7 +13,7 @@ interface Props {
 
 const Text = forwardRef<HTMLHeadingElement | HTMLParagraphElement, Props>(
   (props, ref) => {
-    const { children, className, as, onclick, Style} = props;
+    const { children, className, as, onclick, Style } = props;
     if (as === "h1") {
       return (
         <h1
