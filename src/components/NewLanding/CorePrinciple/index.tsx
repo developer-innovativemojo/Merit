@@ -91,7 +91,7 @@ const CorePrinciple = () => {
             </div>
 
             <div className="flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full">
-              <Image
+              {/* <Image
                 className=" h-full max-h-[322px] w-auto mob:w-full"
                 src={slide1}
                 alt=""
@@ -104,7 +104,7 @@ const CorePrinciple = () => {
                 alt=""
                 width={257}
                 height={143}
-              />
+              /> */}
             </div>
           </div>
           <Text className="mt-10 font-bold text-[24px] leading-[32px] mob:leading-[25px] font-inter max-w-[1050px] text-center mx-auto">
