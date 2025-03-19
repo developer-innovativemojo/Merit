@@ -12,13 +12,13 @@ const button = cva(
     "font-bold",
     "text-[14px]",
     "leading-[36px]",
-    "font-montserrat"
+    "font-montserrat",
   ],
   {
     variants: {
       variant: {
         primary: [
-          "bg-primary text-secondary font-semibold text-[14px] font-bold font-montserrat",
+          "bg-primary text-secondary font-semibold text-[14px] font-bold font-inter",
         ],
       },
       size: {

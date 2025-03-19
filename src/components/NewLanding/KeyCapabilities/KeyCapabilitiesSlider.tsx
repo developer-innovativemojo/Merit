@@ -210,6 +210,9 @@ const OnScrolSlide = () => {
               ></div>
             ))}
           </div>
+          <div className="mt-[54px] mob:mt-[40px] mob:text-center">
+            {/* <LinkButton href="/checkout">Claim Your Lifetime Offer</LinkButton> */}
+          </div>
         </div>
 
         {/* Right Side */}
@@ -220,22 +223,24 @@ const OnScrolSlide = () => {
         >
           {/* Inner Blue Box Container */}
           <div id="image-itemscroll" className="relative">
-            {/* Render only the current image for each section */}
-            <Image
-              key={currentIndex}
-              src={sliderData[currentIndex].image}
-              alt={sliderData[currentIndex].title}
-              className="relative top-[200px] mb-[30px] max-w-[269px] mob:h-[360px] mob:w-[176px]"
-            />
+            {sliderData.map((item, index) => (
+              <Image
+                key={index}
+                src={item.image}
+                alt={item.title}
+                className="relative top-[200px] mb-[30px] max-w-[269px] mob:h-[360px] mob:w-[176px]"
+              />
+            ))}
           </div>
           <div id="image-item2scroll" className="relative">
-            {/* Render one image for the second set corresponding to the current index */}
-            <Image
-              key={currentIndex}
-              src={sliderData2[currentIndex % sliderData2.length].image}
-              alt="r2"
-              className="relative top-[-3500px] mb-[30px] max-w-[269px] mob:h-[360px] mob:w-[176px]"
-            />
+            {sliderData2.map((item, index) => (
+              <Image
+                key={index}
+                src={item.image}
+                alt="r2"
+                className="relative top-[-3500px] mb-[30px] max-w-[269px] mob:h-[360px] mob:w-[176px]"
+              />
+            ))}
           </div>
         </div>
       </div>
