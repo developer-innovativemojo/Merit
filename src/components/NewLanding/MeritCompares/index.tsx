@@ -7,7 +7,7 @@ import check from "@/public/images/new-landing/material-symbols_check.svg";
 
 export const ComparisonTable: React.FC = () => {
   return (
-    <div className="max-w-[1340px] mx-auto mob:px-5">
+    <div className="max-w-[1340px] mx-auto mob:px-5 mt-[120px]">
       <Text className="text-[28px] font-bold font-inter w-full max-w-[1200px] text-center mb-[106px] mob:mb-[50px] mx-auto">
         <span className="text-accentGreen"> MERIT</span> eliminates{" "}
         <span className="text-accentGreen">

@@ -7,14 +7,22 @@ import Text from "@/components/ui/Text";
 
 const AboutSection = () => {
   return (
-    <div className="min-h-[493px] flex items-center justify-center relative mt-[193px] mob:mt-[10px]">
-      <Image
+    <div
+      className="flex items-center justify-center relative mt-[143px] mob:mt-[10px]"
+      style={{
+        backgroundImage: `url(${bg.src})`,
+        backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+      }}
+    >
+      {/* <Image
         className="absolute z-[0] object-cover w-full mob:hidden"
         src={bg}
         alt=""
-      />
+      /> */}
       <Image
-        className="absolute z-[0] object-cover bottom-[-100px] w-[992px] mob:bottom-0 mob:top-[-222px]"
+        className="absolute z-[0] object-cover w-[660px] bottom-[-100px] mob:bottom-0 mob:top-[-222px]"
         src={greenbg}
         alt=""
       />
@@ -35,7 +43,7 @@ const AboutSection = () => {
             <strong>teaming partners, subcontractors, and talent</strong> —
             driving{" "}
             <strong> faster wins and sustainable business growth.</strong>{" "}
-            <br /> Most companies already have{" "}
+            <br /> <br /> Most companies already have{" "}
             <strong>
               {" "}
               valuable relationships, databases, and talent pools
@@ -52,13 +60,6 @@ const AboutSection = () => {
             into actionable matches— <strong>instantly.</strong>
           </Text>
         </div>
-        <Text className="font-inter text-[24px] mt-[82px] mob:mt-[30px] text-center mx-auto mob:px-5">
-          <span className="text-[#4FB848] font-bold"> MERIT</span>{" "}
-          streamlines this business development process, helping organizations
-          strategically align their talent and teaming efforts by leveraging
-          historical knowledge, current and upcoming opportunities, and external
-          market insights in one centralized, actionable platform.
-        </Text>
       </div>
     </div>
   );
