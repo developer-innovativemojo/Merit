@@ -1,21 +1,22 @@
 import type { Metadata } from "next";
-import {Montserrat, Inter} from "next/font/google"
+import { Montserrat, Inter } from "next/font/google";
+
+import AosProvider from "@/components/Providers/Aos";
 
 import "./globals.css";
-
 
 const montserrat = Montserrat({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-montserrat", 
+  variable: "--font-montserrat",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-})
+});
 const inter = Inter({
   subsets: ["latin"],
   display: "swap",
-  variable: "--font-inter", 
+  variable: "--font-inter",
   weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
-})
+});
 
 export const metadata: Metadata = {
   title: "Merit",
@@ -27,14 +28,11 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  
   return (
     <html lang="en">
-      <body
-        className={`${inter.variable} ${montserrat.variable}`}
-      >
+      <body className={`${inter.variable} ${montserrat.variable}`}>
         {/* <Navbar/> */}
-        {children}
+        <AosProvider>{children}</AosProvider>
         {/* <Footer/> */}
       </body>
     </html>
