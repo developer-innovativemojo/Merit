@@ -26,7 +26,12 @@ const AboutSection = () => {
         src={greenbg}
         alt=""
       />
-      <div className="w-full max-w-[1200px]">
+      <div
+        className="w-full max-w-[1200px]"
+        data-aos="fade-up"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-sine"
+      >
         <div className="max-w-[990px] w-full mx-auto flex flex-wrap justify-between gap-8 items-center mob:justify-center mob:gap-0">
           <Text
             as="h1"

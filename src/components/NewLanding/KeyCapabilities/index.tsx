@@ -1,5 +1,9 @@
-import React from "react";
+"use client";
+
+import React, { useEffect } from "react";
 import Image from "next/image";
+import gsap from "gsap";
+import ScrollTrigger from "gsap/ScrollTrigger";
 
 import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
@@ -14,9 +18,34 @@ import gradt from "@/public/images/new-landing/grad-core-top.png";
 import KeyCapabilitiesSlider from "./KeyCapabilitiesSlider";
 
 const KeyCapabilities = () => {
+  useEffect(() => {
+    gsap.registerPlugin(ScrollTrigger); // Register ScrollTrigger
+
+    const images = document.querySelectorAll(".animate-rotate360");
+
+    images.forEach((image) => {
+      const animation = gsap.to(image, {
+        rotation: 360, // Rotate 360 degrees
+        duration: 0.5, // Run for 2 seconds
+        ease: "linear",
+        paused: true, // Initially paused
+      });
+
+      ScrollTrigger.create({
+        trigger: image,
+        start: "top bottom", // When image enters viewport
+        onEnter: () => {
+          animation.play(); // Start animation
+          setTimeout(() => {
+            animation.pause(); // Stop animation after 2 seconds
+          }, 2000);
+        },
+      });
+    });
+  }, []);
   return (
     <>
-      <div className="gradientKeyCap pt-32 ">
+      <div className="gradientKeyCap pt-32">
         <Text
           as="h1"
           className="text-[50px] text-white text-center font-inter leading-[48px] mb-20"
@@ -26,7 +55,12 @@ const KeyCapabilities = () => {
 
         {/* <KeyCapabilitiesSlider /> */}
 
-        <div className="max-w-[1200px] min-h-[600px] mob:min-h-full rounded-[50px] mx-auto mt-10 bg-white flex flex-wrap items-center mob:mx-5">
+        <div
+          className="max-w-[1200px] min-h-[600px] mob:min-h-full rounded-[50px] mx-auto mt-10 bg-white flex flex-wrap items-center mob:mx-5"
+          data-aos="fade-up"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-sine"
+        >
           <div className="w-[50%] py-10 tab:w-full pl-10 pr-5 tab:px-5">
             <Text className="text-[#30434D] text-[32px] font-semibold mb-[17px] px-3">
               AI-Driven Strategic Matching
@@ -47,7 +81,12 @@ const KeyCapabilities = () => {
         </div>
 
         {/* why merit */}
-        <div className="relative  pb-16 ">
+        <div
+          className="relative pb-16"
+          data-aos="fade-down"
+          data-aos-duration="500"
+          data-aos-easing="ease-in-sine"
+        >
           <Image
             className="w-full object-contain object-top absolute h-full"
             src={keybg}
@@ -63,7 +102,11 @@ const KeyCapabilities = () => {
             </Text>
 
             <div className="flex tab:flex-wrap justify-center gap-[15px] pt-[109px] mob:px-5">
-              <Image className="w-[62px] h-[62px]" src={tdmatch} alt="" />
+              <Image
+                className="w-[62px] h-[62px] animate-rotate360"
+                src={tdmatch}
+                alt=""
+              />
               <div>
                 <Text
                   as="h1"
@@ -91,7 +134,11 @@ const KeyCapabilities = () => {
                 >
                   Missed & Lost Opportunities
                 </Text>
-                <Image className="w-[62px] h-[62px]" src={missed} alt="" />
+                <Image
+                  className="w-[62px] h-[62px] animate-rotate360"
+                  src={missed}
+                  alt=""
+                />
               </div>
               <Text className="text-[18px] text-white text-center  font-inter leading-[26px] mx-auto max-w-[671px]">
                 <strong> 5-10 contracts lost per year, per company,</strong> due
@@ -104,7 +151,11 @@ const KeyCapabilities = () => {
             </div>
             {/* 3 */}
             <div className="flex tab:flex-wrap justify-center gap-[16px] pt-[64px] w-full  mob:px-5">
-              <Image className="w-[62px] h-[62px]" src={bigger} alt="" />
+              <Image
+                className="w-[62px] h-[62px] animate-rotate360"
+                src={bigger}
+                alt=""
+              />
 
               <div>
                 <Text
@@ -139,7 +190,11 @@ const KeyCapabilities = () => {
                   Manual BD Workflows Waste Time <br className="mob:hidden" /> &
                   Resources
                 </Text>
-                <Image className="w-[62px] h-[62px]" src={manual} alt="" />
+                <Image
+                  className="w-[62px] h-[62px] animate-rotate360"
+                  src={manual}
+                  alt=""
+                />
               </div>
               <Text className="text-[18px] text-white text-center  font-inter leading-[26px] mx-auto max-w-[791px]">
                 <strong> 60% of BD teams</strong> waste time manually searching

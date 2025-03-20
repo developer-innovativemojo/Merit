@@ -4,6 +4,7 @@ import { Montserrat, Inter } from "next/font/google";
 import AosProvider from "@/components/Providers/Aos";
 
 import "./globals.css";
+import "aos/dist/aos.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
