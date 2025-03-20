@@ -15,13 +15,18 @@ import right from "@/public/images/new-landing/Group 14.png";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[863px] relative flex justify-center items-center px-5 mob:overflow-hidden">
+    <div className="min-h-[863px] relative flex justify-center items-center px-5 mob:overflow-hidden ">
       <Navbar />
 
       <div className="flex justify-center items-center h-full">
         <div className="mx-auto relative z-20">
           {/* Particle animation behind the heading */}
-          <div className="relative w-fit mx-auto">
+          <div
+            className="relative w-fit mx-auto"
+            data-aos="zoom-in"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-sine"
+          >
             <ParticleBackground />
             <Text
               as="h1"
@@ -51,7 +56,7 @@ const HeroSection = () => {
         <Image
           className="absolute bottom-0 mx-auto"
           data-aos="fade-up"
-          data-aos-duration="500"
+          data-aos-duration="800"
           data-aos-easing="ease-in-sine"
           src={bg}
           alt="bg"
@@ -64,6 +69,9 @@ const HeroSection = () => {
           alt="bg"
           width={1493}
           height={84}
+          data-aos="fade-down"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-sine"
         />
         <Image
           className="absolute z-10 left-0 bottom-[-300px]"

@@ -4,7 +4,12 @@ import Text from "@/components/ui/Text";
 import Button from "@/components/ui/Button";
 const Form = () => {
   return (
-    <div className="w-full max-w-[598px]">
+    <div
+      className="w-full max-w-[598px]"
+      data-aos="fade-down"
+      data-aos-duration="900"
+      data-aos-easing="ease-in-sine"
+    >
       <form className="max-w-[671px] mx-auto mt-[-295px] mob:mt-0 rounded-[20px] border-2 border-[#4FB848] bg-white  space-y-[40px] px-[30px] py-[60px]">
         <div className="flex tab:flex-wrap gap-[24px]">
           <div className="w-1/2 tab:w-full space-y-[23px]">

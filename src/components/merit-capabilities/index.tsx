@@ -18,7 +18,12 @@ const Meritcapabilities = () => {
       }}
     >
       <div className="w-full max-w-[1200px] flex justify-center items-center relative z-20">
-        <div className="w-full">
+        <div
+          className="w-full"
+          data-aos="fade-down"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-sine"
+        >
           <Text
             as="h1"
             className="text-[40px] mob:text-[30px] mob:mt-[100px] mb-[150px] mob:mb-8 mt-0 text-center font-bold text-accentGreen"

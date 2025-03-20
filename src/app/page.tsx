@@ -10,16 +10,20 @@ import MeritImapct from "@/components/NewLanding/Merit Impact";
 import { ComparisonTable } from "@/components/NewLanding/MeritCompares";
 import ReadyToSee from "@/components/NewLanding/ReadyToSee";
 import FooterLanding from "@/components/NewLanding/FooterLanding";
-// import BackgroundBeamsDemo from "@/components/background-beams";
+import PinnedCards from "@/components/background-beams/AnimationCards";
+import BackgroundBeamsDemo from "@/components/background-beams";
 export default function Home() {
   return (
-    <>
+    <div
+    // className="h-screen overflow-scroll scroll-shadows"
+    >
       <HeroSection />
       <AboutSection />
       <CorePrinciple />
       <HowMerit />
       {/* <BackgroundBeamsDemo /> */}
       <KeyCapabilities />
+      <PinnedCards />
       {/* <WhyMerit /> */}
       <HowMeritFixes />
       {/* <MeritImapct /> */}
@@ -27,6 +31,6 @@ export default function Home() {
       <ComparisonTable />
       <ReadyToSee />
       <FooterLanding />
-    </>
+    </div>
   );
 }
