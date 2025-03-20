@@ -3,7 +3,8 @@
 import React, { useEffect } from "react";
 import Image from "next/image";
 import gsap from "gsap";
-import ScrollTrigger from "gsap/ScrollTrigger"; // Import ScrollTrigger plugin
+import ScrollTrigger from "gsap/ScrollTrigger";
+
 import Text from "@/components/ui/Text";
 
 import keybg from "@/public/images/new-landing/kery bg.png";

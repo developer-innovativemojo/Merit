@@ -1,40 +1,43 @@
 import React from "react";
 import Image from "next/image";
-
 import Text from "@/components/ui/Text";
+import { BackgroundBeams } from "@/components/ui/background-beams";
 
 import slide1 from "@/public/images/new-landing/core slide1 (1).png";
 import slide2 from "@/public/images/new-landing/core slide 2.png";
-import bg from "@/public/images/new-landing/corebg.png";
 import gradtop from "@/public/images/new-landing/gradb.png";
 import gradright from "@/public/images/new-landing/grad-core-br.png";
+import TestimonialSliderMob from "./CorePrincipleSlider/CorePrincipleSlider";
 
 const CorePrinciple = () => {
   return (
     <>
-      <Text className="font-inter text-[24px] mt-[106px] mob:mt-[30px] font-bold max-w-[1200px] px-5 text-center mx-auto mob:px-5 relative z-10">
-        <span className="text-[#4FB848] font-bold"> MERIT</span>{" "}
-        streamlines this business development process, helping organizations
-        strategically align their talent and teaming efforts by leveraging
-        historical knowledge, current and upcoming opportunities, and external
-        market insights in one centralized, actionable platform.
-        {/* Add the background image */}
-        <Image
-          className="w-full left-0 absolute max-w-[1000px] h-[800px]  object-cover opacity-100 mx-auto bottom-[-365px] right-0 mob:top-[-3%] z-0"
-          src={gradtop}
-          alt="gradtop"
-          width={1400}
-          height={300} // Adjust this based on your desired image height
-        />
-      </Text>
-
-      <div className="relative px-5 bg-white ">
-        <div className="relative overflow-hidden">
+      <div
+        data-aos="fade-down"
+        data-aos-duration="800"
+        data-aos-easing="ease-in-sine"
+      >
+        <Text className="font-inter text-[24px] mt-[106px] mob:mt-[30px] font-bold max-w-[1200px] px-5 text-center mx-auto mob:px-5 relative z-10">
+          <span className="text-[#4FB848] font-bold"> MERIT</span> streamlines
+          this business development process, helping organizations strategically
+          align their talent and teaming efforts by leveraging historical
+          knowledge, current and upcoming opportunities, and external market
+          insights in one centralized, actionable platform.
+          {/* Add the background beam animation */}
           <Image
-            className="h-full w-full absolute object-cover z-0"
-            src={bg}
-            alt="bg"
+            className="w-full left-0 absolute max-w-[1000px] h-[800px] object-cover opacity-100 mx-auto bottom-[-365px] right-0 mob:top-[-3%] z-0"
+            src={gradtop}
+            alt="gradtop"
+            width={1400}
+            height={300}
           />
+        </Text>
+      </div>
+
+      <div className="relative px-5 bg-white z-[-4]">
+        <div className="relative overflow-hidden z-[-4]">
+          {/* Background beams animation */}
+          {/* <BackgroundBeams className="absolute inset-0 h-full w-full z-0" /> */}
 
           <Image
             className="absolute right-0 bottom-[0px] z-10"
@@ -44,7 +47,12 @@ const CorePrinciple = () => {
             height={236}
           />
 
-          <div className="max-w-[1300px] mx-auto pt-[100px] mob:pt-[70px] relative z-0">
+          <div
+            className="max-w-[1300px] mx-auto pt-[100px] mob:pt-[70px] relative z-0"
+            data-aos="fade-up"
+            data-aos-duration="800"
+            data-aos-easing="ease-in-sine"
+          >
             <Text
               as="h1"
               className="text-accentGreen text-[50px] mb-[24px] mob:leading-[50px] mob:text-center"
@@ -104,33 +112,26 @@ const CorePrinciple = () => {
               </div>
 
               <div className="flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full">
-                <Image
-                  className=" h-full max-h-[322px] w-auto mob:w-full"
-                  src={slide1}
-                  alt=""
-                  width={486}
-                  height={272}
-                />
-                <Image
-                  className=" h-full max-h-[143px] mb-12 w-auto mob:w-full"
-                  src={slide2}
-                  alt=""
-                  width={257}
-                  height={143}
-                />
+                <TestimonialSliderMob totalSlides={6} />
               </div>
             </div>
           </div>
         </div>
-        <Text className="mt-[126px] font-bold text-[24px] leading-[32px] mob:leading-[25px] mb-[134px] font-inter max-w-[1050px] text-center mx-auto">
-          <span className="text-[#4FB848] font-bold">MERIT</span> isn’t just a
-          tool—it’s a{" "}
-          <span className="text-[#4FB848] font-bold">
-            strategic advantage that helps organizations move faster
-          </span>
-          , make better decisions, and maximize their existing relationships and
-          data.
-        </Text>
+        <div
+          data-aos="zoom-in"
+          data-aos-duration="800"
+          data-aos-easing="ease-in-sine"
+        >
+          <Text className="mt-[126px] font-bold text-[24px] leading-[32px] mob:leading-[25px] mb-[134px] font-inter max-w-[1050px] text-center mx-auto">
+            <span className="text-[#4FB848] font-bold">MERIT</span> isn’t just a
+            tool—it’s a{" "}
+            <span className="text-[#4FB848] font-bold">
+              strategic advantage that helps organizations move faster
+            </span>
+            , make better decisions, and maximize their existing relationships
+            and data.
+          </Text>
+        </div>
       </div>
     </>
   );
