@@ -23,7 +23,7 @@ export default function Home() {
       <HowMerit />
       {/* <BackgroundBeamsDemo /> */}
       <KeyCapabilities />
-      <PinnedCards />
+      {/* <PinnedCards /> */}
       {/* <WhyMerit /> */}
       <HowMeritFixes />
       {/* <MeritImapct /> */}
