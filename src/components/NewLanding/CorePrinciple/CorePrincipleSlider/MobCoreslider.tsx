@@ -29,48 +29,16 @@ const MobCoreSlider: React.FC<TestimonialSliderMobProps> = ({
         <div className="w-full max-w-[800px] mob:max-w-full">
           <Swiper
             ref={swiperRef}
-            // effect="coverflow"
             grabCursor={true}
             centeredSlides={true}
             spaceBetween={80} // reduced space between slides
             slidesPerView={1}
-            // breakpoints={{
-            //   768: {
-            //     slidesPerView: 1,
-            //     effect: "coverflow",
-            //     coverflowEffect: {
-            //       rotate: 0,
-            //       stretch: 0,
-            //       depth: 0,
-            //       modifier: 0,
-            //       slideShadows: false,
-            //     },
-            //   },
-            //   1300: {
-            //     slidesPerView: 1.5,
-            //     effect: "coverflow",
-            //     coverflowEffect: {
-            //       rotate: 0,
-            //       stretch: 0,
-            //       depth: 100,
-            //       modifier: 3,
-            //       slideShadows: false,
-            //     },
-            //   },
-            // }}
             speed={1500} // slower transition speed (1500ms)
             autoplay={{
               delay: 3000, // 3-second delay between transitions
               disableOnInteraction: false,
             }}
             loop={true}
-            // coverflowEffect={{
-            //   rotate: 0,
-            //   stretch: 0,
-            //   depth: 100,
-            //   modifier: 3,
-            //   slideShadows: false,
-            // }}
             navigation={{
               nextEl: ".custom-next",
               prevEl: ".custom-prev",
