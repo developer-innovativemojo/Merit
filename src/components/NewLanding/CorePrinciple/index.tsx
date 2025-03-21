@@ -8,6 +8,7 @@ import slide2 from "@/public/images/new-landing/core slide 2.png";
 import gradtop from "@/public/images/new-landing/gradb.png";
 import gradright from "@/public/images/new-landing/grad-core-br.png";
 import TestimonialSliderMob from "./CorePrincipleSlider/CorePrincipleSlider";
+import MobCoreSlider from "./CorePrincipleSlider/MobCoreslider";
 
 const CorePrinciple = () => {
   return (
@@ -34,7 +35,7 @@ const CorePrinciple = () => {
         </Text>
       </div>
 
-      <div className="relative px-5 bg-white z-[-4]">
+      <div className="relative px-5 z-[-4]">
         <div className="relative overflow-hidden z-[-4]">
           {/* Background beams animation */}
           {/* <BackgroundBeams className="absolute inset-0 h-full w-full z-0" /> */}
@@ -46,28 +47,31 @@ const CorePrinciple = () => {
             width={337}
             height={236}
           />
+          <div className="mob:flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full hidden">
+            <MobCoreSlider totalSlides={6} />
+          </div>
 
           <div
-            className="max-w-[1300px] mx-auto pt-[100px] mob:pt-[70px] relative z-0"
+            className="max-w-[1300px] mx-auto pt-[100px] relative z-0 mob:pt-0"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
           >
             <Text
               as="h1"
-              className="text-accentGreen text-[50px] mb-[24px] mob:leading-[50px] mob:text-center"
+              className="text-accentGreen text-[50px] mob:text-[32px] mb-[24px] mob:leading-[40px] mob:text-center mob:mb-[60px]"
             >
               Core Principles of MERIT
             </Text>
-            <Text className="text-[24px] font-inter max-w-[735px]">
+            <Text className="text-[24px] mob:leading-[30px] font-inter max-w-[735px]">
               At its core,{" "}
               <span className="font-bold text-[#4FB848]"> MERIT</span> is
               designed to maximize efficiency and optimize strategic
               decision-making through
             </Text>
-            <div className="flex tab:flex-wrap w-full mt-[50px] mob:mt-[20px] items-start">
-              <div className="max-w-[480px] space-y-[20px]">
-                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter ">
+            <div className="flex tab:flex-wrap w-full mt-[50px] mob:mt-[55px] items-start">
+              <div className="max-w-[480px] space-y-[20px] mob:space-y-[20px]">
+                <Text className="text-[24px] leading-[32px] mob:text-[18px] mob:leading-[22px] font-inter ">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     M – Matching:
@@ -75,7 +79,7 @@ const CorePrinciple = () => {
                   Optimizing connections across processes, systems, and
                   resources to ensure the best outcomes.
                 </Text>
-                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter ">
+                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     E – Efficiency:
@@ -84,7 +88,7 @@ const CorePrinciple = () => {
                   solutions and technology.​
                 </Text>
 
-                <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
+                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     R – Results:{" "}
@@ -93,7 +97,7 @@ const CorePrinciple = () => {
                   organizational goals and objectives.​
                 </Text>
 
-                <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
+                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     I – Innovation:
@@ -101,7 +105,7 @@ const CorePrinciple = () => {
                   Leveraging cutting-edge tools and strategies to modernize
                   operations and improve performance.​
                 </Text>
-                <Text className="text-[24px] leading-[32px] font-inter mob:leading-[22px]">
+                <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     T – Technology:
@@ -111,7 +115,7 @@ const CorePrinciple = () => {
                 </Text>
               </div>
 
-              <div className="flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full">
+              <div className="flex tab:flex-wrap tab:justify-center items-center w-full mob:hidden">
                 <TestimonialSliderMob totalSlides={6} />
               </div>
             </div>
@@ -122,7 +126,7 @@ const CorePrinciple = () => {
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
         >
-          <Text className="mt-[126px] font-bold text-[24px] leading-[32px] mob:leading-[25px] mb-[134px] font-inter max-w-[1050px] text-center mx-auto">
+          <Text className="mt-[-25px] mob:my-[94px] font-bold text-[24px] mob:text-[18px] leading-[32px] mob:leading-[25px] mb-[134px] font-inter max-w-[1050px] text-center mx-auto">
             <span className="text-[#4FB848] font-bold">MERIT</span> isn’t just a
             tool—it’s a{" "}
             <span className="text-[#4FB848] font-bold">

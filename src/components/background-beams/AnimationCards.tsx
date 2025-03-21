@@ -6,8 +6,9 @@ import Text from "../ui/Text";
 
 import slide1 from "@/public/images/new-landing/coreslider3.png";
 import slide2 from "@/public/images/new-landing/coreslider1.png";
-import slide3 from "@/public/images/new-landing/key3.png";
-import slide4 from "@/public/images/new-landing/key4.png";
+import slide3 from "@/public/images/new-landing/key4.png";
+import slide4 from "@/public/images/new-landing/key3.png";
+import slide5 from "@/public/images/new-landing/key2.png";
 import slide6 from "@/public/images/new-landing/key1.png";
 
 export default function ScrollSyncPage() {
@@ -60,7 +61,7 @@ export default function ScrollSyncPage() {
   }, []);
 
   return (
-    <div className="flex justify-center items-center">
+    <div className="flex justify-center items-center mob:hidden">
       <div className="flex justify-center items-center max-w-[1200px]">
         {/* First container: Normal scrolling (cards appear from bottom) */}
         <div
@@ -191,7 +192,7 @@ export default function ScrollSyncPage() {
             <Image src={slide4} alt="" width={494} height={275} />
           </div>
           <div className="w-full h-[636px] flex justify-center items-center rotate-180">
-            <Image src={slide4} alt="" width={494} height={275} />
+            <Image src={slide5} alt="" width={494} height={275} />
           </div>
           <div className="w-full h-[636px] flex justify-center items-center rotate-180">
             <Image src={slide6} alt="" width={494} height={275} />

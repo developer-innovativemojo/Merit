@@ -17,6 +17,7 @@ import manual from "@/public/images/new-landing/manual.svg";
 import gradt from "@/public/images/new-landing/grad-core-top.png";
 import KeyCapabilitiesSlider from "./KeyCapabilitiesSlider";
 import ScrollSyncPage from "@/components/background-beams/AnimationCards";
+import KeyCapabilitiesMob from "./KeyCapabilitiesMobSlider";
 
 const KeyCapabilities = () => {
   useEffect(() => {
@@ -49,14 +50,16 @@ const KeyCapabilities = () => {
       <div className="gradientKeyCap pt-32">
         <Text
           as="h1"
-          className="text-[50px] text-white text-center font-inter leading-[48px] mb-20"
+          className="text-[50px] text-white text-center font-inter leading-[32px] mob:text-[32px] mb-20"
         >
           Key Capabilities
         </Text>
 
         {/* <KeyCapabilitiesSlider /> */}
         <ScrollSyncPage />
-
+        <div className="px-5 hidden mob:block">
+          <KeyCapabilitiesMob />
+        </div>
         {/* <div
           className="max-w-[1200px] min-h-[600px] mob:min-h-full rounded-[50px] mx-auto mt-10 bg-white flex flex-wrap items-center mob:mx-5"
           data-aos="fade-up"
@@ -98,12 +101,12 @@ const KeyCapabilities = () => {
           <div className=" relative">
             <Text
               as="h1"
-              className="text-[50px] text-white text-center font-inter leading-[48px] pt-[80px]"
+              className="text-[50px] mob:text-[32px] text-white text-center font-inter leading-[48px] pt-[80px]"
             >
               Why MERIT?
             </Text>
 
-            <div className="flex tab:flex-wrap justify-center gap-[15px] pt-[109px] mob:px-5">
+            <div className="flex tab:flex-wrap justify-center gap-[15px] mob:gap-[30px] pt-[109px] mob:pt-[51px] mob:px-5">
               <Image
                 className="w-[62px] h-[62px] animate-rotate360"
                 src={tdmatch}
@@ -112,15 +115,17 @@ const KeyCapabilities = () => {
               <div>
                 <Text
                   as="h1"
-                  className="text-[40px] text-white text-center font-inter leading-[48px] "
+                  className="text-[40px] text-white text-center font-inter mob:text-[24px] mob:leading-[32px] leading-[48px] "
                 >
                   Teaming & Staffing Delays = Lost Revenue
                 </Text>
                 <Text className="text-[18px] text-white text-center  font-inter leading-[26px] pt-[50px] mx-auto max-w-[671px]">
                   <span className="font-bold"> 4-8 weeks → </span> The average
-                  time BD teams take to assemble the right team. <br />
+                  time BD teams take to assemble the right team. <br />{" "}
+                  <br className="hidden mob:block" />
                   <span className="font-bold"> 30-60 days → </span>Typical delay
                   in staffing roles after a win, slowing execution. <br />
+                  <br className="hidden mob:block" />
                   <span className="font-bold">35% of companies</span> miss
                   staffing deadlines, putting contracts and revenue at risk.
                 </Text>
@@ -128,11 +133,11 @@ const KeyCapabilities = () => {
             </div>
 
             {/* 2 */}
-            <div className="flex flex-col items-center justify-center gap-[40px] pt-[49px] mob:px-5">
-              <div className="flex items-center justify-between max-w-[671px] w-full ">
+            <div className="flex flex-col items-center justify-center gap-[40px] mob:gap-[50px] pt-[49px] mob:pt-[80px] mob:px-5">
+              <div className="flex items-center justify-between max-w-[671px] w-full mob:flex-col-reverse mob:gap-[30px]">
                 <Text
                   as="h1"
-                  className="text-[40px] text-white text-center font-inter leading-[48px] "
+                  className="text-[40px] mob:text-[24px] mob:leading-[32px] text-white text-center font-inter leading-[48px] "
                 >
                   Missed & Lost Opportunities
                 </Text>
@@ -144,15 +149,17 @@ const KeyCapabilities = () => {
               </div>
               <Text className="text-[18px] text-white text-center  font-inter leading-[26px] mx-auto max-w-[671px]">
                 <strong> 5-10 contracts lost per year, per company,</strong> due
-                to slow teaming & staffing. <br />{" "}
+                to slow teaming & staffing. <br />
+                <br className="hidden mob:block" />{" "}
                 <strong> $10M-$50M in revenue lost annually </strong>from missed
-                bids & execution delays. <br />{" "}
+                bids & execution delays. <br />
+                <br className="hidden mob:block" />{" "}
                 <strong>80% of successful bids</strong> go to teams that
                 <strong>position early</strong>—most BD teams react too late
               </Text>
             </div>
             {/* 3 */}
-            <div className="flex tab:flex-wrap justify-center gap-[16px] pt-[64px] w-full  mob:px-5">
+            <div className="flex tab:flex-wrap justify-center gap-[16px] pt-[64px] mob:pt-[80px] w-full mob:gap-[30px] mob:px-5">
               <Image
                 className="w-[62px] h-[62px] animate-rotate360"
                 src={bigger}
@@ -162,19 +169,21 @@ const KeyCapabilities = () => {
               <div>
                 <Text
                   as="h1"
-                  className="text-[40px] text-white text-center font-inter leading-[48px] "
+                  className="text-[40px] text-white text-center font-inter mob:text-[24px] mob:leading-[32px] leading-[48px] "
                 >
                   The Bigger Issue: The Wrong <br className="mob:hidden" />{" "}
                   Teams Get Picked
                 </Text>
-                <Text className="text-[18px] text-white text-center  font-inter leading-[26px] pt-[40px] mx-auto max-w-[744px]">
+                <Text className="text-[18px] text-white text-center  font-inter leading-[26px] pt-[40px] mob:pt-[50px] mx-auto max-w-[744px]">
                   BD teams{" "}
                   <strong>
                     choose partners & staff based on relationships, not data,
                   </strong>{" "}
-                  leading to poor execution. <br />{" "}
+                  leading to poor execution. <br />
+                  <br className="hidden mob:block" />{" "}
                   <strong> Weak staff on proposals = Lower win rates</strong>{" "}
-                  (agencies see through misaligned teams). <br />{" "}
+                  (agencies see through misaligned teams). <br />
+                  <br className="hidden mob:block" />{" "}
                   <strong> The wrong prime or sub</strong>
                   can derail execution, causing{" "}
                   <strong>lost follow-on work & reputation damage.</strong>
@@ -183,11 +192,11 @@ const KeyCapabilities = () => {
             </div>
 
             {/* 4 */}
-            <div className="flex flex-col items-center justify-center gap-[40px] pt-[52px] mob:px-5">
-              <div className="flex items-center justify-end gap-[50px] max-w-[869px] w-full ">
+            <div className="flex flex-col items-center justify-center gap-[40px] pt-[52px] mob:px-5 mob:gap-[50px]">
+              <div className="flex items-center justify-end gap-[50px] mob:gap-[30px] max-w-[869px] w-full flex-col-reverse">
                 <Text
                   as="h1"
-                  className="text-[40px] text-white text-center font-inter leading-[48px] "
+                  className="text-[40px] text-white text-center font-inter leading-[48px] mob:text-[24px] mob:leading-[32px]"
                 >
                   Manual BD Workflows Waste Time <br className="mob:hidden" /> &
                   Resources
@@ -200,9 +209,11 @@ const KeyCapabilities = () => {
               </div>
               <Text className="text-[18px] text-white text-center  font-inter leading-[26px] mx-auto max-w-[791px]">
                 <strong> 60% of BD teams</strong> waste time manually searching
-                for partners & talent. <br />{" "}
+                for partners & talent. <br />
+                <br className="hidden mob:block" />{" "}
                 <strong> 50% of past performance data</strong> is scattered
-                across outdated spreadsheets & emails. <br />{" "}
+                across outdated spreadsheets & emails. <br />
+                <br className="hidden mob:block" />{" "}
                 <strong> 25-30 hours spent per proposal,</strong> often using
                 incomplete or outdated data.
               </Text>
@@ -222,7 +233,7 @@ const KeyCapabilities = () => {
               <Image className="w-[62px] h-[62px]" src={manual} alt="" />
             </div> */}
           </div>
-          <Text className="text-[22px] font-inter text-center mt-[100px] relative mx-auto font-bold text-white max-w-[1130px] pb-[50px]">
+          <Text className="text-[22px] mob:text-[20px] mob:px-5 mob:leading-[28px] mob:pb-[20px] font-inter text-center mt-[100px] relative mx-auto mob:mt-[80px] font-bold text-white max-w-[1130px] pb-[50px]">
             MERIT fixes this. AI-driven teaming, staffing, and BD intelligence
             eliminate inefficiencies—helping businesses move faster, win more,
             and execute flawlessly

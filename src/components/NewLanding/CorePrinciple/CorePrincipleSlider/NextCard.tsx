@@ -19,7 +19,11 @@ const NextCard: React.FC<NextCardProps> = ({ isNext, nextIndex }) => {
         } transition-all duration-[0.5s] ease-in-out`} // Adjusted duration for smoother transitions
       >
         {testimonial?.avatar && (
-          <Image src={testimonial?.avatar} alt="image" className="pl-[160px]" />
+          <Image
+            src={testimonial?.avatar}
+            alt="image"
+            className="ml-[-100px]"
+          />
         )}
       </div>
     </>

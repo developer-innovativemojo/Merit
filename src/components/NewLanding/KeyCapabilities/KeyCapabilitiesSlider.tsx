@@ -203,7 +203,7 @@ const OnScrolSlide = () => {
               <div
                 className={cn(
                   "h-[16px] w-[16px] rounded-full bg-[#535358] transition-all duration-300",
-                  currentIndex === index && "w-[60px] bg-white"
+                  currentIndex === index && "w-[60px] "
                 )}
                 key={index}
                 // onClick={() => setCurrentIndex(index)}

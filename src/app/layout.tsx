@@ -2,9 +2,9 @@ import type { Metadata } from "next";
 import { Montserrat, Inter } from "next/font/google";
 
 import AosProvider from "@/components/Providers/Aos";
+import Navbar from "@/components/NewLanding/NavbarLanding";
 
 import "./globals.css";
-import "aos/dist/aos.css";
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -32,7 +32,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${inter.variable} ${montserrat.variable}`}>
-        {/* <Navbar/> */}
+        <Navbar />
         <AosProvider>{children}</AosProvider>
         {/* <Footer/> */}
       </body>

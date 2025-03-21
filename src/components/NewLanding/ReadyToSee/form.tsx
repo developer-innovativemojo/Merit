@@ -10,13 +10,17 @@ const Form = () => {
       data-aos-duration="900"
       data-aos-easing="ease-in-sine"
     >
-      <form className="max-w-[671px] mx-auto mt-[-295px] mob:mt-0 rounded-[20px] border-2 border-[#4FB848] bg-white  space-y-[40px] px-[30px] py-[60px]">
+      <form
+        className="max-w-[671px] mx-auto mt-[-295px] mob:mt-0 rounded-[20px] border-2 border-[#4FB848] bg-white  space-y-[40px] px-[30px] py-[60px]"
+        style={{ border: "2px solid #4FB848" }}
+      >
         <div className="flex tab:flex-wrap gap-[24px]">
           <div className="w-1/2 tab:w-full space-y-[23px]">
             <Text className="font-inter text-[18px] text-[#30434D]">
               First Name
             </Text>
             <input
+              style={{ border: "1px solid #4FB848" }}
               type="text"
               placeholder="First Name"
               className="w-full border border-[#4FB848] h-[61px] px-3 rounded-[12px] placeholder:text-opacity-60 outline-none text-[18px] text-[#30434D] placeholder:text-[18px] placeholder:text-[#30434D]"
@@ -28,6 +32,7 @@ const Form = () => {
             </Text>
             <input
               type="text"
+              style={{ border: "1px solid #4FB848" }}
               placeholder="Last Name"
               className="w-full border border-[#4FB848] h-[61px] px-3 rounded-[12px] placeholder:text-opacity-60 outline-none text-[18px] text-[#30434D] placeholder:text-[18px] placeholder:text-[#30434D]"
             />
@@ -38,6 +43,7 @@ const Form = () => {
           <Text className="font-inter text-[18px] text-[#30434D]">Email</Text>
           <input
             type="text"
+            style={{ border: "1px solid #4FB848" }}
             placeholder="Email"
             className="w-full border border-[#4FB848] h-[61px] px-3 rounded-[12px] placeholder:text-opacity-60 outline-none text-[18px] text-[#30434D] placeholder:text-[18px] placeholder:text-[#30434D]"
           />
@@ -47,6 +53,7 @@ const Form = () => {
           <Text className="font-inter text-[18px] text-[#30434D]">Message</Text>
           <textarea
             placeholder="Leave us a message..."
+            style={{ border: "1px solid #4FB848" }}
             className="w-full border border-[#4FB848] placeholder:text-opacity-60 h-[222px] px-3 pt-3 rounded-[12px] outline-none text-[18px] text-[#30434D] placeholder:text-[18px] placeholder:text-[#30434D] resize-none"
           />
         </div>

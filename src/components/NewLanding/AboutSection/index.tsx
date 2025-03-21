@@ -9,18 +9,18 @@ const AboutSection = () => {
   return (
     <div
       className="flex items-center justify-center relative mt-[143px] mob:mt-[10px]"
-      style={{
-        backgroundImage: `url(${bg.src})`,
-        backgroundSize: "cover",
-        backgroundPosition: "center",
-        backgroundRepeat: "no-repeat",
-      }}
+      // style={{
+      //   backgroundImage: `url(${bg.src})`,
+      //   backgroundSize: "cover",
+      //   backgroundPosition: "center",
+      //   backgroundRepeat: "no-repeat",
+      // }}
     >
-      {/* <Image
+      <Image
         className="absolute z-[0] object-cover w-full mob:hidden"
         src={bg}
         alt=""
-      /> */}
+      />
       <Image
         className="absolute z-[0] object-cover w-[660px] bottom-[-100px] mob:bottom-0 mob:top-[-222px]"
         src={greenbg}
@@ -35,7 +35,7 @@ const AboutSection = () => {
         <div className="max-w-[990px] w-full mx-auto flex flex-wrap justify-between gap-8 items-center mob:justify-center mob:gap-0">
           <Text
             as="h1"
-            className="text-accentGreen text-[50px] font-inter mob:text-center"
+            className="text-accentGreen text-[50px] mob:text-[32px] font-inter mob:text-center mob:mt-10"
           >
             About
           </Text>

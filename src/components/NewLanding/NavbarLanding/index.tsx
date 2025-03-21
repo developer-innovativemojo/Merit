@@ -7,6 +7,7 @@ import { gsap } from "gsap";
 
 import Drawer from "@/components/ui/Drawer";
 import logo from "@/public/images/new-landing/Logo MERIT white.png";
+import moblogo from "@/public/images/new-landing/mob-logo.svg";
 import Button from "@/components/ui/Button";
 
 const Navbar = () => {
@@ -17,7 +18,6 @@ const Navbar = () => {
   const onClose = () => setIsOpen(false);
   const onOpen = () => setIsOpen(true);
 
- 
   useEffect(() => {
     if (isOpen) {
       const listItems = document.querySelectorAll(".list-items");
@@ -35,15 +35,25 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className="absolute top-[0px]  z-50 w-full">
+      <nav className=" top-[0px]  z-50 w-full">
         <div className="flex justify-center items-center w-full ">
-          <div className="relative bg-[#30434D] rounded-[50px] max-w-[1276px] min-h-[108px] w-full flex flex-wrap items-center justify-between mx-auto mt-[61px] mob:rounded-[0px]  mob:mt-[0px]">
+          <div className="relative bg-[#30434D] mob:bg-transparent rounded-[50px] max-w-[1276px] min-h-[108px] mob:min-h-full mob:mt-[58px] w-full flex flex-wrap items-center justify-between mx-auto mt-[61px] mob:rounded-[0px] ">
             <div className="flex items-center justify-between w-full gap-[35px] px-[83px] mob:px-8 ">
-              <Link
-                href="/"
-                className=" mob:w-[140px] "
-              >
-                <Image src={logo} alt="Flowbite Logo" width={188} height={63} />
+              <Link href="/" className=" mob:w-[140px] ">
+                <Image
+                  src={logo}
+                  alt="Flowbite Logo"
+                  width={188}
+                  height={63}
+                  className="mob:hidden"
+                />
+                <Image
+                  src={moblogo}
+                  alt="Flowbite Logo"
+                  width={288}
+                  height={63}
+                  className="mob:block hidden"
+                />
               </Link>
               <div className="flex items-center xl:hidden ">
                 <button
@@ -77,7 +87,6 @@ const Navbar = () => {
                   id="navbar-default"
                 >
                   <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex  py-4  gap-[37px] md:flex-row rtl:space-x-reverse md:mt-0 tab:bg-black">
-                   
                     <li>
                       <Link
                         href="#"
@@ -88,7 +97,7 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                       About
+                        About
                       </Link>
                     </li>
                     <li>
@@ -101,7 +110,7 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                       How MERIT Works
+                        How MERIT Works
                       </Link>
                     </li>
                     <li>
@@ -114,7 +123,7 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                       Capabilities
+                        Capabilities
                       </Link>
                     </li>
                     <li>
@@ -127,10 +136,12 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                       Why MERIT?
+                        Why MERIT?
                       </Link>
                     </li>
-                <Button className="bg-[#4FB848] rounded-[20px] max-w-[137px] h-[44px]">Sign up</Button>
+                    <Button className="bg-[#4FB848] rounded-[20px] max-w-[137px] h-[44px]">
+                      Sign up
+                    </Button>
                   </ul>
                 </div>
               </div>
@@ -142,14 +153,14 @@ const Navbar = () => {
                   >
                     <span className="sr-only">Open main menu</span>
                     <svg
-                      className="w-5 h-5"
+                      className="w-[30px] h-[30px]"
                       aria-hidden="true"
                       xmlns="http://www.w3.org/2000/svg"
                       fill="none"
                       viewBox="0 0 17 14"
                     >
                       <path
-                        stroke="currentColor"
+                        stroke="#4FB848"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                         strokeWidth="2"
@@ -160,7 +171,13 @@ const Navbar = () => {
                 </div>
                 <Drawer isOpen={isOpen} onClose={onClose}>
                   <ul className="font-normal w-full z-50 flex flex-col py-4 gap-0">
-                    {["#About", "#How MERIT Works", "#Capabilities", "#Why MERIT?", "#Sign up"].map((path) => (
+                    {[
+                      "#About",
+                      "#How MERIT Works",
+                      "#Capabilities",
+                      "#Why MERIT?",
+                      "#Sign up",
+                    ].map((path) => (
                       <a
                         href={path}
                         key={path}
@@ -179,7 +196,6 @@ const Navbar = () => {
                         <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                       </a>
                     ))}
-                    
                   </ul>
                 </Drawer>
               </div>
