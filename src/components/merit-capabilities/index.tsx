@@ -8,7 +8,7 @@ import intrnal from "@/public/images/new-landing/Slider4 2.png";
 const Meritcapabilities = () => {
   return (
     <div
-      className="relative px-5 bg-white flex justify-center items-center bg-contain overflow-hidden"
+      className="relative px-5 flex justify-center items-center bg-contain overflow-hidden"
       style={{
         backgroundImage: "url('/images/new-landing/Dot Grid.png')",
         backgroundSize: "contain",
@@ -26,13 +26,13 @@ const Meritcapabilities = () => {
         >
           <Text
             as="h1"
-            className="text-[40px] mob:text-[30px] mob:mt-[100px] mb-[150px] mob:mb-8 mt-0 text-center font-bold text-accentGreen"
+            className="text-[50px] mob:text-[32px] mob:leading-[40px] mob:mt-[100px] mb-[150px] mob:mb-[83px] mt-0 text-center font-bold text-accentGreen"
           >
             MERIT’s <span className="text-black"> Capabilities</span> – Faster
             Teaming, Smarter Matching, and Better Business Development
           </Text>
 
-          <div className="flex justify-between xl:justify-center xl:flex-wrap items-start mb-[150px] xl:items-center xl:gap-[40px] mob:mb-[50px]">
+          <div className="flex justify-between xl:justify-center xl:flex-wrap-reverse items-start mb-[150px] mob:gap-[20px] xl:items-center xl:gap-[40px] mob:mb-[66px]">
             <div className="w-full max-w-[695px]">
               <Text className="font-inter text-[25px] w-full max-w-[700px] mb-6 text-accentGreen font-bold">
                 AI-Driven Matching for Growth, Bids, and Contracts
@@ -74,7 +74,7 @@ const Meritcapabilities = () => {
 
           {/* internal and externla */}
 
-          <div className="flex justify-between xl:justify-center flex-row-reverse xl:flex-wrap items-start xl:items-center xl:gap-[40px]">
+          <div className="flex justify-between xl:justify-center flex-row-reverse xl:flex-wrap-reverse items-start xl:items-center xl:gap-[40px]">
             <div className="w-full max-w-[695px]">
               <Text className="font-inter text-[25px] w-full max-w-[700px] mb-6 text-accentGreen font-bold">
                 Internal & External Talent Optimization

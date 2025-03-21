@@ -14,9 +14,7 @@ import PinnedCards from "@/components/background-beams/AnimationCards";
 import BackgroundBeamsDemo from "@/components/background-beams";
 export default function Home() {
   return (
-    <div
-    // className="h-screen overflow-scroll scroll-shadows"
-    >
+    <>
       <HeroSection />
       <AboutSection />
       <CorePrinciple />
@@ -31,6 +29,6 @@ export default function Home() {
       <ComparisonTable />
       <ReadyToSee />
       <FooterLanding />
-    </div>
+    </>
   );
 }

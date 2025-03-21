@@ -6,13 +6,19 @@ import Form from "./form";
 
 import bg from "@/public/images/new-landing/Header Background.png";
 import desktop from "@/public/images/new-landing/DesktopTower.svg";
+import download from "@/public/images/new-landing/donwload.svg";
+import mail from "@/public/images/new-landing/Envelope.svg";
 
 const ReadyToSee = () => {
   return (
-    <div className="relative bg-white flex justify-center items-center overflow-hidden">
+    <div className="relative flex justify-center items-center overflow-hidden">
       {/* Background image container */}
       <div className="">
-        <Image src={bg} alt="gradtop" fill className="" />
+        <Image
+          src={bg}
+          alt="gradtop"
+          className="w-[1300px] absolute object-cover left-0 right-0 mx-auto top-[145px]"
+        />
       </div>
 
       {/* Main content */}
@@ -22,23 +28,23 @@ const ReadyToSee = () => {
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
         >
-          <Text className="text-[45px] mob:text-[30px] mob:text-center font-bold my-[200px] mob:my-10">
+          <Text className="text-[45px] mob:text-[30px] mob:text-center font-bold my-[200px] mob:my-[85px]">
             Ready to See <span className="text-accentGreen ">MERIT</span> in
             Action?
           </Text>
         </div>
 
-        <div className="w-full bg-[#30434D] min-h-[953px] px-5 flex justify-center items-center mob:py-[30px]">
-          <div className="w-full max-w-[1200px] flex flex-wrap justify-between items-center xl:justify-center xl:gap-[20px]">
+        <div className="w-full bg-[#30434D] min-h-[953px] mob:min-h-[1682px] px-5 flex justify-center items-center mob:py-[30px]">
+          <div className="w-full max-w-[1220px] flex flex-wrap justify-between items-center xl:justify-center xl:gap-[80px]">
             <div>
               <div
-                className="flex gap-2 items-center w-full max-w-[500px]"
+                className="flex gap-4 items-center w-full max-w-[550px] mob:flex-col"
                 data-aos="fade-down"
                 data-aos-duration="800"
                 data-aos-easing="ease-in-sine"
               >
                 <Image src={desktop} alt="desktop" />
-                <Text className="text-[22px] font-inter text-white">
+                <Text className="text-[24px] font-inter text-white mob:text-center">
                   <span className="text-accentGreen font-bold">
                     Request a Demo
                   </span>{" "}
@@ -47,33 +53,32 @@ const ReadyToSee = () => {
                 </Text>
               </div>
               <div
-                className="flex gap-2 items-center w-full max-w-[500px] my-[50px]"
+                className="flex gap-4 items-center w-full max-w-[500px] my-[50px] mob:flex-col"
                 data-aos="fade-down"
                 data-aos-duration="900"
                 data-aos-easing="ease-in-sine"
               >
-                <Image src={desktop} alt="desktop" />
-                <Text className="text-[22px] font-inter text-white">
+                <Image src={download} alt="desktop" />
+                <Text className="text-[24px] font-inter text-white mob:text-center">
                   <span className="text-accentGreen font-bold">
-                    Request a Demo
+                    Download Our White Paper
                   </span>{" "}
-                  – See how MERIT helps you find partners, subcontractors, and
-                  talent—faster.
+                  AI-Driven Business Development & Talent Optimization.
                 </Text>
               </div>
               <div
-                className="flex gap-2 items-center w-full max-w-[500px]"
+                className="flex gap-4 items-center w-full max-w-[500px] mob:flex-col"
                 data-aos="fade-down"
                 data-aos-duration="1000"
                 data-aos-easing="ease-in-sine"
               >
-                <Image src={desktop} alt="desktop" />
-                <Text className="text-[22px] font-inter text-white">
+                <Image src={mail} alt="desktop" />
+                <Text className="text-[24px] font-inter text-white mob:text-center">
                   <span className="text-accentGreen font-bold">
-                    Request a Demo
+                    Get in Touch
                   </span>{" "}
-                  – See how MERIT helps you find partners, subcontractors, and
-                  talent—faster.
+                  Let&apos;s discuss how MERIT can fit your exact business
+                  needs.
                 </Text>
               </div>
             </div>
