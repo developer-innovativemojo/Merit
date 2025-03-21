@@ -12,7 +12,7 @@ import win from "@/public/images/new-landing/win.svg";
 const MeritImapct = () => {
   return (
     <div
-      className="relative px-5 bg-white flex justify-center items-center overflow-hidden"
+      className="relative px-5  flex justify-center items-center overflow-hidden"
       style={{
         backgroundImage: "url('/images/new-landing/Dot Grid.png')",
         backgroundSize: "contain",

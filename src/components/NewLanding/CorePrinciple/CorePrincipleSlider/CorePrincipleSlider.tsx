@@ -1,19 +1,18 @@
 "use client";
 
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import {
-  Keyboard,
   Navigation,
-  Scrollbar,
-  Autoplay,
   Pagination,
+  EffectCoverflow,
+  Autoplay,
 } from "swiper/modules";
 import "swiper/css";
-import "swiper/css/scrollbar";
 import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/effect-coverflow";
 import Card from "./Card";
-import NextCard from "./NextCard";
 
 interface TestimonialSliderMobProps {
   totalSlides: number;
@@ -23,40 +22,54 @@ const TestimonialSliderMob: React.FC<TestimonialSliderMobProps> = ({
   totalSlides = 6,
 }) => {
   const swiperRef = useRef<any>(null);
-  const [activeIndex, setActiveIndex] = useState<number>(0);
-
-  useEffect(() => {
-    const swiper = swiperRef.current?.swiper;
-    if (swiper) {
-      // Listen to the slide change event
-      swiper.on("slideChange", () => {
-        setActiveIndex(swiper.realIndex); // Directly update the active index
-      });
-    }
-  }, []);
-
-  const nextIndex = (activeIndex + 1) % totalSlides;
 
   return (
-    <div className="w-full h-full pb-[58px]">
+    <div className="w-full h-full pb-[58px] mob:pb-[60px] relative z-10">
       <div className="flex justify-center w-full">
-        <div className="w-full max-w-[800px]">
+        <div className="w-full max-w-[800px] coreswiperslider">
           <Swiper
             ref={swiperRef}
+            effect="coverflow"
+            grabCursor={true}
+            centeredSlides={true}
+            spaceBetween={-80} // reduced space between slides
+            slidesPerView={1.5}
             breakpoints={{
-              768: { slidesPerView: 1 },
-
-              1323: { slidesPerView: 2, spaceBetween: 40 },
+              768: {
+                slidesPerView: 1,
+                effect: "coverflow",
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 3,
+                  slideShadows: false,
+                },
+              },
+              1300: {
+                slidesPerView: 1.5,
+                effect: "coverflow",
+                coverflowEffect: {
+                  rotate: 0,
+                  stretch: 0,
+                  depth: 100,
+                  modifier: 3,
+                  slideShadows: false,
+                },
+              },
             }}
-            slidesPerView={1}
-            speed={1000}
-            // slidesPerGroup={1}
-            initialSlide={0}
-            // centeredSlides={true}
+            speed={1500} // slower transition speed (1500ms)
+            // autoplay={{
+            //   delay: 3000, // 3-second delay between transitions
+            //   disableOnInteraction: false,
+            // }}
             loop={true}
-            autoplay={{
-              delay: 1000,
-              disableOnInteraction: false,
+            coverflowEffect={{
+              rotate: 0,
+              stretch: 0,
+              depth: 100,
+              modifier: 3,
+              slideShadows: false,
             }}
             navigation={{
               nextEl: ".custom-next",
@@ -65,19 +78,13 @@ const TestimonialSliderMob: React.FC<TestimonialSliderMobProps> = ({
             pagination={{
               clickable: true,
             }}
-            modules={[Keyboard, Navigation, Scrollbar, Autoplay, Pagination]}
-            className="mySwiper"
+            modules={[Navigation, Pagination, EffectCoverflow, Autoplay]}
+            className="mySwiper mob:h-[400px]"
           >
             {[...Array(totalSlides)].map((_, index) => (
               <SwiperSlide key={index}>
-                <div
-                  className={`relative min-h-[539.71px] mt-[100px] w-[447.06px]`}
-                >
-                  {activeIndex === index ? (
-                    <Card isActive activeIndex={activeIndex} />
-                  ) : nextIndex === index ? (
-                    <NextCard isNext nextIndex={nextIndex} />
-                  ) : null}
+                <div className="relative min-h-[539.71px] mt-[100px] w-[447.06px] ">
+                  <Card slideIndex={index} />
                 </div>
               </SwiperSlide>
             ))}

@@ -13,7 +13,7 @@ import win from "@/public/images/new-landing/win.svg";
 const HowMeritFixes = () => {
   return (
     <div
-      className="relative px-5 bg-white flex justify-center items-center overflow-hidden"
+      className="relative px-5 flex justify-center items-center overflow-hidden"
       style={{
         backgroundImage: "url('/images/new-landing/Dot Grid.png')",
         backgroundSize: "contain",
@@ -41,13 +41,13 @@ const HowMeritFixes = () => {
         >
           <Text
             as="h1"
-            className="text-[40px] mt-[113px] mob:my-10 text-center font-bold mob:text-[30px]"
+            className="text-[40px] mt-[113px] mob:my-10 text-center font-bold mob:text-[32px]"
           >
             How <span className="text-accentGreen">MERIT</span> Fixes Business
             Development—Instantly
           </Text>
-          <div className="flex justify-between xl:justify-center xl:flex-wrap items-center mt-[-20px]">
-            <div className="w-full max-w-[695px]">
+          <div className="flex justify-between xl:justify-center xl:flex-wrap-reverse items-center mt-[-20px]">
+            <div className="w-full max-w-[695px] mob:mt-[-100px]">
               <ul className="text-[18px] font-inter space-y-[25px] text-black">
                 <li>
                   <span className="text-accentGreen font-semibold">
@@ -96,7 +96,7 @@ const HowMeritFixes = () => {
             <Image
               src={fix}
               alt="fix"
-              className=" relative bottom-10"
+              className=" relative bottom-10 mob:bottom-[5.5rem] mob:right-[15px]"
               width={519}
               height={455}
             />
@@ -108,14 +108,15 @@ const HowMeritFixes = () => {
             data-aos="fade-down"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
+            className="mob:mt-[80px]"
           >
             <Text
               as="h1"
-              className="text-[40px] mb-[80px] mob:text-[40px] mt-0 text-center font-bold"
+              className="text-[40px] mb-[80px] mob:mb-[56px] mob:text-[32px] mt-0 text-center font-bold"
             >
               <span className="text-accentGreen">MERIT</span> Impact
             </Text>
-            <div className="flex flex-wrap justify-center items-center w-full gap-[135px] mob:gap-6 mb-[85px] mob:mb-[30px]">
+            <div className="flex flex-wrap justify-center items-center w-full gap-x-[135px] gap-y-[64px] mob:gap-6 mb-[85px] mob:mb-[40px]">
               <div className="flex gap-2 w-full max-w-[470px]">
                 <Image src={container} alt="container" />
                 <Text className="font-inter text-[18px]">
@@ -158,7 +159,7 @@ const HowMeritFixes = () => {
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
           >
-            <Text className="text-[28px] font-bold max-w-[1200px] text-black mb-[154px]">
+            <Text className="text-[28px] mob:text-[24px] font-bold max-w-[1200px] text-black mb-[154px] mob:text-center mob:mb-0">
               <span className="text-[#4FB848]">
                 Stop losing time, money, and deals. MERIT
               </span>{" "}

@@ -13,7 +13,7 @@ export const ComparisonTable: React.FC = () => {
         data-aos-duration="800"
         data-aos-easing="ease-in-sine"
       >
-        <Text className="text-[28px] font-bold font-inter w-full max-w-[1200px] text-center mb-[106px] mob:mb-[50px] mx-auto">
+        <Text className="text-[28px] mob:text-[24px] font-bold font-inter w-full max-w-[1200px] text-center mb-[106px] mob:mb-[50px] mx-auto">
           <span className="text-accentGreen"> MERIT</span> eliminates{" "}
           <span className="text-accentGreen">
             {" "}
@@ -21,50 +21,60 @@ export const ComparisonTable: React.FC = () => {
           </span>
           —so you can focus on winning and executing, not searching.
         </Text>
-        <Text className="text-[48px] font-bold font-inter w-full max-w-[1200px] text-center mb-[106px] mob:mb-[50px] mx-auto">
+        <Text className="text-[48px] mob:text-[24px] font-bold font-inter w-full max-w-[1200px] text-center mb-[106px] mob:mb-[50px] mx-auto">
           How <span className="text-accentGreen"> MERIT</span> Compares to
           Market Alternatives
         </Text>
       </div>
       {/* Wrap the table in a container for horizontal scrolling on mobile */}
       <div
-        className="overflow-x-auto"
+        className="overflow-x-scroll custom-scrollbar"
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-easing="ease-in-sine"
       >
         <table className="w-full border-collapse">
           <thead>
-            <tr className="border-b">
-              <th className="p-2 mob:p-1 text-center border-r border-gray-300">
-                <Text className="font-semibold text-[24px]">Feature</Text>
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <th
+                className="p-2 mob:p-1 text-center border-r border-gray-300 mob:w-full"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
+                <Text className="font-semibold text-[24px] mob:w-[300px]">
+                  Feature
+                </Text>
               </th>
               <th className="p-[60px] mob:p-2 center-center">
-                <Text className="text-[16px] font-semibold">MERIT</Text>
+                <Text className="text-[16px] font-semibold mob:w-[150px]">
+                  MERIT
+                </Text>
               </th>
               <th className="p-2 mob:p-1 text-centerer">
-                <Text className="text-[16px] font-semibold">
+                <Text className="text-[16px] font-semibold mob:w-[150px]">
                   GovWin &amp; Market Intelligence
                   <br />
                   (GovWin, BDOV, etc.)
                 </Text>
               </th>
               <th className="p-2 mob:p-1 text-centerer">
-                <Text className="text-[16px] font-semibold">
+                <Text className="text-[16px] font-semibold mob:w-[150px]">
                   Recruiting &amp; HR Platforms
                   <br />
                   (LinkedIn, JazzHR, Paylocity, Workday, etc.)
                 </Text>
               </th>
               <th className="p-2 mob:p-1 text-center">
-                <Text className="text-[16px] font-semibold">
+                <Text className="text-[16px] font-semibold mob:w-[150px]">
                   Business Intelligence &amp; Analytics
                   <br />
                   (Sisense, Pyramid Analytics, etc.)
                 </Text>
               </th>
               <th className="p-2 mob:p-1 text-center">
-                <Text className="text-[16px] font-semibold">
+                <Text className="text-[16px] font-semibold mob:w-[150px]">
                   CRM &amp; BD Management
                   <br />
                   (Salesforce, HubSpot, Unanet, Deltek)
@@ -73,8 +83,14 @@ export const ComparisonTable: React.FC = () => {
             </tr>
           </thead>
           <tbody>
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   AI-Driven Business &amp; Talent Matching
                 </Text>
@@ -111,8 +127,14 @@ export const ComparisonTable: React.FC = () => {
               </td>
             </tr>
 
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Teaming &amp; Subcontractor Discovery
                 </Text>
@@ -149,8 +171,14 @@ export const ComparisonTable: React.FC = () => {
               </td>
             </tr>
 
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Internal &amp; External Relationship-Based Matching
                 </Text>
@@ -205,8 +233,14 @@ export const ComparisonTable: React.FC = () => {
               </td>
             </tr>
 
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Dynamic Talent &amp; Partner Scoring
                 </Text>
@@ -243,8 +277,14 @@ export const ComparisonTable: React.FC = () => {
               </td>
             </tr>
 
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Strategic Decision Support for BD &amp; Hiring
                 </Text>
@@ -296,8 +336,14 @@ export const ComparisonTable: React.FC = () => {
               </td>
             </tr>
 
-            <tr className="border-b">
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+            <tr
+              className="border-b"
+              style={{ borderBottom: "1px solid #30434D" }}
+            >
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Predictive BD Intelligence &amp; Market Insights
                 </Text>
@@ -350,7 +396,10 @@ export const ComparisonTable: React.FC = () => {
             </tr>
 
             <tr>
-              <td className="p-3 mob:p-2 border-r border-gray-300">
+              <td
+                className="p-3 mob:p-2 border-r border-gray-300"
+                style={{ borderRight: "1px solid #30434D" }}
+              >
                 <Text className="text-[18px] font-bold">
                   Cross-Team Collaboration for BD, HR &amp; Ops
                 </Text>
