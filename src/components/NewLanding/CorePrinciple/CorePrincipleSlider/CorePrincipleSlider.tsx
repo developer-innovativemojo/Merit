@@ -59,10 +59,10 @@ const TestimonialSliderMob: React.FC<TestimonialSliderMobProps> = ({
               },
             }}
             speed={1500} // slower transition speed (1500ms)
-            // autoplay={{
-            //   delay: 3000, // 3-second delay between transitions
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3000, // 3-second delay between transitions
+              disableOnInteraction: false,
+            }}
             loop={true}
             coverflowEffect={{
               rotate: 0,

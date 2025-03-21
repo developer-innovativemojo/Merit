@@ -39,10 +39,10 @@ const KeyCapabilitiesMob = ({}) => {
             spaceBetween={80} // reduced space between slides
             slidesPerView={1}
             speed={1500} // slower transition speed (1500ms)
-            // autoplay={{
-            //   delay: 3000, // 3-second delay between transitions
-            //   disableOnInteraction: false,
-            // }}
+            autoplay={{
+              delay: 3000, // 3-second delay between transitions
+              disableOnInteraction: false,
+            }}
             loop={true}
             navigation={{
               nextEl: ".custom-next",
