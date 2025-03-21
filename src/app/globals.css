@@ -194,3 +194,13 @@ More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
 .aos-animate {
   z-index: 10 !important; /* Ensures it stays above other elements */
 }
+
+@layer utilities {
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+
+.key-cap-grad {
+  background: linear-gradient(180deg, #4fb848 0%, #235220 100%);
+}

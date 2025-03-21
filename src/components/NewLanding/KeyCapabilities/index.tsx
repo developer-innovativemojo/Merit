@@ -16,6 +16,7 @@ import bigger from "@/public/images/new-landing/bigger.svg";
 import manual from "@/public/images/new-landing/manual.svg";
 import gradt from "@/public/images/new-landing/grad-core-top.png";
 import KeyCapabilitiesSlider from "./KeyCapabilitiesSlider";
+import ScrollSyncPage from "@/components/background-beams/AnimationCards";
 
 const KeyCapabilities = () => {
   useEffect(() => {
@@ -54,8 +55,9 @@ const KeyCapabilities = () => {
         </Text>
 
         {/* <KeyCapabilitiesSlider /> */}
+        <ScrollSyncPage />
 
-        <div
+        {/* <div
           className="max-w-[1200px] min-h-[600px] mob:min-h-full rounded-[50px] mx-auto mt-10 bg-white flex flex-wrap items-center mob:mx-5"
           data-aos="fade-up"
           data-aos-duration="500"
@@ -78,7 +80,7 @@ const KeyCapabilities = () => {
           <div className="w-[50%] py-10 px-5 tab:w-full bg-[#235220] h-full min-h-[600px] tab:min-h-full rounded-r-[50px] tab:rounded-t-[0px] mob:rounded-b-[50px] flex items-center justify-center">
             <Image src={keyslide} alt="" width={494} height={275} />
           </div>
-        </div>
+        </div> */}
 
         {/* why merit */}
         <div

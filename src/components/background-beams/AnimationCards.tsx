@@ -1,202 +1,203 @@
 "use client";
-import React, { useEffect, useRef } from "react";
+
+import { useEffect, useRef } from "react";
 import Image from "next/image";
+import Text from "../ui/Text";
 
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-// import {
-//   CardOneContent,
-//   CardtwoContent,
-//   CardThreeContent,
-//   CardfourContent,
-//   CardfiveContent,
-//   CardsixContent,
-// } from "./ServicesContent";
+import slide1 from "@/public/images/new-landing/coreslider3.png";
+import slide2 from "@/public/images/new-landing/coreslider1.png";
+import slide3 from "@/public/images/new-landing/key3.png";
+import slide4 from "@/public/images/new-landing/key4.png";
+import slide6 from "@/public/images/new-landing/key1.png";
 
-import dbaimg from "@/imgs/home/dna.png";
-import b1 from "@/imgs/services/pngaaa 10.png";
-import b2 from "@/imgs/services/pngaaa 11.png";
-import b3 from "@/imgs/services/pngaaa 12.png";
-import b4 from "@/imgs/services/pngaaa 13.png";
-
-gsap.registerPlugin(ScrollTrigger);
-
-const ServicesStackSection = () => {
-  const cardRef1 = useRef(null);
-  const cardRef2 = useRef(null);
-  const cardRef3 = useRef(null);
-  const cardRef4 = useRef(null);
-  const cardRef5 = useRef(null);
-  const cardRef6 = useRef(null);
+export default function ScrollSyncPage() {
+  const normalRef = useRef<HTMLDivElement>(null);
+  const reverseRef = useRef<HTMLDivElement>(null);
+  // Keep track of the desired scroll position and the current animated value.
+  const targetScroll = useRef(0);
+  const currentScroll = useRef(0);
 
   useEffect(() => {
-    // Animation for the first card
-    gsap.to(cardRef1.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef1.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    const normalDiv = normalRef.current;
+    const reverseDiv = reverseRef.current;
+    if (!normalDiv || !reverseDiv) return;
 
-    // Animation for the second card
-    gsap.to(cardRef2.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef2.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // Adjust this factor to slow down the scroll delta.
+    const scrollSpeedFactor = 0.8;
+    let animationFrameId: number;
 
-    // Animation for the third card
-    gsap.to(cardRef3.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef3.current,
-        start: "top center",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
-    // Animation for the four card
-    gsap.to(cardRef4.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef1.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // Update the target scroll position on wheel events.
+    const handleWheel = (e: WheelEvent) => {
+      e.preventDefault();
+      targetScroll.current += e.deltaY * scrollSpeedFactor;
+      // Clamp the target scroll between 0 and the maximum scroll height.
+      const maxScroll = normalDiv.scrollHeight - normalDiv.clientHeight;
+      if (targetScroll.current < 0) targetScroll.current = 0;
+      if (targetScroll.current > maxScroll) targetScroll.current = maxScroll;
+    };
 
-    // Animation for the five card
-    gsap.to(cardRef5.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef2.current,
-        start: "top top",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // Attach the wheel event to both containers (passive false so preventDefault works)
+    normalDiv.addEventListener("wheel", handleWheel, { passive: false });
+    reverseDiv.addEventListener("wheel", handleWheel, { passive: false });
 
-    // Animation for the six card
-    gsap.to(cardRef6.current, {
-      opacity: 1,
-      scrollTrigger: {
-        trigger: cardRef3.current,
-        start: "top center",
-        end: "bottom top",
-        scrub: true,
-      },
-    });
+    // Smoothly animate the scroll position toward the target value.
+    const smoothScroll = () => {
+      // Use a damping factor to interpolate (adjust 0.1 for smoothness)
+      currentScroll.current +=
+        (targetScroll.current - currentScroll.current) * 0.1;
+      normalDiv.scrollTop = currentScroll.current;
+      reverseDiv.scrollTop = currentScroll.current;
+      animationFrameId = requestAnimationFrame(smoothScroll);
+    };
+
+    smoothScroll();
+
+    return () => {
+      normalDiv.removeEventListener("wheel", handleWheel);
+      reverseDiv.removeEventListener("wheel", handleWheel);
+      cancelAnimationFrame(animationFrameId);
+    };
   }, []);
 
   return (
-    <>
-      <div
-        className="flex mob:hidden  justify-center  relative "
-        id="what-we-do"
-      >
-        {/* <div className="sticky top-0 w-[90%]  flex justify-center ">
-        <Image src={dbaimg} alt="" width={1024} height={768} />
-      </div> */}
-        <div className=" relative max-w-[1440px]">
-          {/* bg imgs design */}
-
-          <div
-            ref={cardRef1}
-            className="  w-full min-h-screen flex items-center sticky top-[0px] text-accent "
-          >
-            <div className="h-[500px] bg-red-500 tab:h-[70%] mob:h-auto w-[500px] mob:pb-[25px] rounded-[24px]"></div>
+    <div className="flex justify-center items-center">
+      <div className="flex justify-center items-center max-w-[1200px]">
+        {/* First container: Normal scrolling (cards appear from bottom) */}
+        <div
+          ref={normalRef}
+          className="h-[636px] min-w-[600px] overflow-y-auto space-y-[200px] no-scrollbar bg-white rounded-l-[50px]"
+        >
+          {/* 1 */}
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] font-semibold mb-[17px] px-3">
+                AI-Driven Strategic Matching
+              </Text>
+              <Text className="text-[#30434D] text-[18px] leading-[26px] font-inter ml-2 mt-[17px]">
+                Identifies optimal connections between organizations,
+                businesses, suppliers, and associations based on <br />
+                <span className="font-bold">
+                  real-time needs, expertise, and operational goals.
+                </span>
+              </Text>
+            </div>
+          </div>
+          {/* 2 */}
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] leading-[38px] font-semibold mb-[17px] px-3">
+                Data-Driven Decision Intelligence
+              </Text>
+              <Text className="text-[#30434D] text-[18px] leading-[26px] font-inter ml-2 mt-[17px]">
+                Delivers{" "}
+                <strong> real-time analytics, industry benchmarking,</strong>{" "}
+                and predictive insights to support smarter{" "}
+                <strong> hiring, procurement, and business strategies.</strong>
+              </Text>
+            </div>
+          </div>
+          {/* 3 */}
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] leading-[39px] font-semibold mb-[17px] px-3">
+                Supplier & Partnership Optimization
+              </Text>
+              <Text className="text-[#30434D] text-[16px] leading-[26px] font-inter ml-2 mt-[17px]">
+                <strong>Uses AI-powered analytics</strong> to{" "}
+                <strong>
+                  enhance corporate supplier diversity, subcontracting
+                  partnerships, and B2B matchmaking.
+                </strong>
+              </Text>
+            </div>
+          </div>
+          {/* 4 */}
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] leadig-[39px] font-semibold mb-[17px] px-3">
+                AI-Augmented Workforce Matching
+              </Text>
+              <Text className="text-[#30434D] text-[18px] leading-[26px] font-inter ml-2 mt-[17px]">
+                Matches{" "}
+                <strong>
+                  {" "}
+                  talent to job opportunities, bids, projects, and leadership
+                  development programs
+                </strong>{" "}
+                while <strong>minimizing bias</strong> through
+                <strong> context-aware AI filtering.</strong>
+              </Text>
+            </div>
           </div>
 
-          <div
-            ref={cardRef2}
-            className="w-full  min-h-screen flex items-center sticky top-[0px]  mob:pt-[0px] bg-white"
-          >
-            <div className="h-[500px] tab:h-[70%] bg-yellow-500 mob:h-auto w-[500px] mob:pb-[25px] rounded-t-[24px] rounded-b-[20px] "></div>
+          {/* 5 */}
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] leadig-[39px] font-semibold mb-[17px] px-3">
+                Optimized Association & Business Networks
+              </Text>
+              <Text className="text-[#30434D] text-[18px] leading-[26px] font-inter ml-2 mt-[17px]">
+                Helps associations, member-based organizations, and professional
+                groups enhance engagement, collaboration, and strategic
+                partnerships.
+              </Text>
+            </div>
           </div>
 
-          <div
-            ref={cardRef3}
-            className="w-full min-h-screen flex items-center sticky top-[0px]  mob:pt-[0px] bg-white"
-          >
-            <div className="h-[500px] tab:h-[80%] mob:min-h[80vh] mob:h-auto mob:pb-[25px] w-[500px] bg-orange-500 rounded-t-[24px] rounded-b-[18px]"></div>
+          {/* 6 */}
+
+          <div className="w-full py-10 flex justify-center items-center min-h-[636px]">
+            <div className="w-full max-w-[502px]">
+              <Text className="text-[#30434D] text-[32px] leadig-[39px] font-semibold mb-[17px] px-3">
+                API & System Integration
+              </Text>
+              <Text className="text-[#30434D] text-[18px] leading-[26px] font-inter ml-2 mt-[17px]">
+                <strong>Plug MERIT into any existing system </strong>{" "}
+                (Salesforce, Workday, SAP Ariba, Oracle, HubSpot, etc.) for a
+                <strong> seamless, automated workflow</strong> with{" "}
+                <strong>zero additional workload.</strong>
+              </Text>
+            </div>
           </div>
-          <div
-            ref={cardRef4}
-            className="w-full min-h-screen flex items-center sticky top-[0px] mob:pt-[0px] bg-white"
-          >
-            <div className="h-[500px] tab:h-[80%] mob:min-h[80vh] mob:h-auto mob:pb-[25px] w-[500px] bg-black rounded-t-[24px] rounded-b-[18px]"></div>
+        </div>
+
+        {/* Second container: Reversed scrolling (cards appear from top) */}
+        <div
+          ref={reverseRef}
+          className="h-[636px] overflow-y-auto rotate-180 w-full min-w-[600px] space-y-[200px] no-scrollbar key-cap-grad rounded-l-[50px]"
+        >
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image
+              src={slide1}
+              alt=""
+              width={494}
+              height={275}
+              className="rounded-[20px]"
+            />
           </div>
-          <div
-            ref={cardRef5}
-            className="w-full min-h-screen flex items-center sticky top-[0px] mob:pt-[0px] bg-white"
-          >
-            <div className="h-[500px] tab:h-[80%] mob:min-h[80vh] mob:h-auto mob:pb-[25px] w-[500px] bg-blue-500 rounded-t-[24px] rounded-b-[18px]"></div>
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image
+              src={slide2}
+              alt=""
+              width={494}
+              height={275}
+              className="rounded-[20px]"
+            />
           </div>
-          <div
-            ref={cardRef6}
-            className="w-full  min-h-screen flex items-center sticky top-[0px]  mob:pt-[0px] py-20 bg-white"
-          >
-            <div className="h-[500px] tab:h-[80%] mob:min-h[80vh] mob:h-auto mob:pb-[25px] w-[500px] bg-gray-500 rounded-t-[24px] rounded-b-[18px]"></div>
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image src={slide3} alt="" width={494} height={275} />
+          </div>
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image src={slide4} alt="" width={494} height={275} />
+          </div>
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image src={slide4} alt="" width={494} height={275} />
+          </div>
+          <div className="w-full h-[636px] flex justify-center items-center rotate-180">
+            <Image src={slide6} alt="" width={494} height={275} />
           </div>
         </div>
       </div>
-    </>
+    </div>
   );
-};
-
-export default ServicesStackSection;
-
-// "use client";
-
-// import React, { useEffect, useRef } from "react";
-// import { gsap } from "gsap";
-// import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-// gsap.registerPlugin(ScrollTrigger);
-
-// const AnimatedCards = () => {
-//   const cardRefs = useRef([]);
-
-//   useEffect(() => {
-//     cardRefs.current.forEach((card, index) => {
-//       gsap.fromTo(
-//         card,
-//         { y: -100 }, // Start position slightly above viewport
-//         {
-//           y: 0, // Moves down naturally
-//           ease: "power2.out",
-//           scrollTrigger: {
-//             trigger: card,
-//             start: "top bottom", // Triggers when the top of the card hits the bottom of the viewport
-//             end: "top top", // Ends when the top of the card reaches the top of the viewport
-//             scrub: true,
-//           },
-//         }
-//       );
-//     });
-//   }, []);
-
-//   return (
-//     <div className="flex flex-col items-center space-y-6 p-10">
-//       {[...Array(6)].map((_, index) => (
-//         <div
-//           key={index}
-//           ref={(el) => (cardRefs.current[index] = el)}
-//           className="w-80 h-40 bg-blue-500 text-white flex items-center justify-center rounded-lg shadow-lg"
-//         >
-//           Card {index + 1}
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default AnimatedCards;
+}
