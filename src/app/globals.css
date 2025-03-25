@@ -271,3 +271,20 @@ body {
   border-radius: 20px;
   background: #30434d;
 }
+
+.the-pain-bg {
+  background: linear-gradient(
+    359.85deg,
+    #30434d 21.43%,
+    #30434d 41.71%,
+    #3a5856 78.07%
+  );
+}
+
+.col-gap {
+  column-gap: 150px;
+}
+
+.row-gap {
+  row-gap: 50px;
+}

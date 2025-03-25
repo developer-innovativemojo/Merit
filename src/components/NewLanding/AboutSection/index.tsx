@@ -8,7 +8,7 @@ import Text from "@/components/ui/Text";
 const AboutSection = () => {
   return (
     <div
-      className="flex items-center justify-center relative mt-[143px] mob:mt-[10px]"
+      className="flex items-center justify-center relative mt-[143px] mob:mt-[10px] mb-[120px]"
       // style={{
       //   backgroundImage: `url(${bg.src})`,
       //   backgroundSize: "cover",
@@ -22,7 +22,7 @@ const AboutSection = () => {
         alt=""
       />
       <Image
-        className="absolute z-[0] object-cover w-[660px] bottom-[-100px] mob:bottom-0 mob:top-[-222px]"
+        className="absolute z-[0] object-cover w-full max-w-[1050px] bottom-[-100px] mob:bottom-0 mob:top-[-222px]"
         src={greenbg}
         alt=""
       />
@@ -32,7 +32,7 @@ const AboutSection = () => {
         data-aos-duration="800"
         data-aos-easing="ease-in-sine"
       >
-        <div className="max-w-[990px] w-full mx-auto flex flex-wrap justify-between gap-8 items-center mob:justify-center mob:gap-0">
+        <div className="max-w-[993px] w-full mx-auto flex flex-col justify-between gap-[48px] items-center mob:justify-center mob:gap-0">
           <Text
             as="h1"
             className="text-accentGreen text-[50px] mob:text-[32px] font-inter mob:text-center mob:mt-10"
@@ -41,28 +41,16 @@ const AboutSection = () => {
           </Text>
           <Image className=" mob:block hidden" src={bg} alt="" />
 
-          <Text className="max-w-[683px] w-full font-inter text-[#30434D] text-[18px] leading-[26px] mob:px-5">
-            MERIT is a <strong> business intelligence platform </strong> that
-            helps organizations <strong> quickly connect </strong> with the
-            right
-            <strong>teaming partners, subcontractors, and talent</strong> —
-            driving{" "}
-            <strong> faster wins and sustainable business growth.</strong>{" "}
-            <br /> <br /> Most companies already have{" "}
+          <Text className="max-w-full w-full text-center font-inter text-[#30434D] text-[18px] leading-[26px] mob:px-5">
+            <strong> MERIT</strong> is an AI-driven business intelligence
+            platform built for{" "}
             <strong>
               {" "}
-              valuable relationships, databases, and talent pools
+              Business Development (BD), HR/Recruiters, and Program Management{" "}
             </strong>{" "}
-            — but <strong>are they being used effectively?</strong> Too often,
-            teams waste <strong>weeks</strong> searching outdated lists, making
-            cold outreach, and scrambling across internal teams to find the
-            right people and partners. <br /> <br />
-            <strong>MERIT changes that.</strong> Our AI-driven platform{" "}
-            <strong>eliminates the guesswork</strong> by turning{" "}
-            <strong>
-              historical data, real-time insights, and market intelligence
-            </strong>{" "}
-            into actionable matches— <strong>instantly.</strong>
+            teams. It reduces friction, eliminates wasted time, and connects the
+            right people at the right time—so teams can win more contracts and
+            execute without delays.
           </Text>
         </div>
       </div>
