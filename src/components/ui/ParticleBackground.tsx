@@ -33,7 +33,7 @@ const ParticleBackground = () => {
             trail: {
               enable: true,
               length: 1,
-              fillColor: "#ffffff00", // Transparent trail effect
+              // fillColor: "#ffffff00",
             },
           },
         },
