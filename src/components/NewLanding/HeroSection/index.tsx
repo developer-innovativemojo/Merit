@@ -15,12 +15,12 @@ import right from "@/public/images/new-landing/Group 14.png";
 
 const HeroSection = () => {
   return (
-    <div className="min-h-[863px] mob:min-h-full relative flex justify-center items-center px-5 mob:overflow-hidden mob:mt-[79px]">
+    <div className="mob:min-h-full relative flex justify-center items-center px-5 mob:overflow-hidden mob:mt-[79px]">
       <div className="flex justify-center items-center h-full">
         <div className="mx-auto relative z-20">
           {/* Particle animation behind the heading */}
           <div
-            className="relative w-fit mx-auto"
+            className="relative w-fit mx-auto mt-[123px] mob:mt-0"
             data-aos="zoom-in"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
@@ -40,15 +40,20 @@ const HeroSection = () => {
             </Text>
           </div>
 
-          <div className="mob:flex justify-center gap-[30px] w-full mt-[16px]  hidden">
+          {/* mob arrow images */}
+          <div className="mob:flex justify-center gap-[30px] w-full mt-[16px] hidden">
             <Image className="w-[158px]" src={right} alt="bg" />
             <Image className="w-[155px]" src={left} alt="bg" />
           </div>
+          {/* mob arrow images */}
+
           <Text className="text-accentGreen text-center mt-[34px] font-bold text-[20px] mob:max-w-[365px] font-inter">
             Faster Teaming. Smarter Matches. Better Business.
           </Text>
+
+          {/* mob green image */}
           <Image
-            className="hidden mob:block mx-auto mt-[43px]"
+            className="block mx-auto mt-[43px]"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
@@ -57,19 +62,11 @@ const HeroSection = () => {
             width={1092}
             height={358}
           />
+          {/* mob green image */}
         </div>
 
         {/* ALL IMAGES ARE KEPT INTACT */}
-        <Image
-          className="absolute bottom-0 mx-auto mob:hidden"
-          data-aos="fade-up"
-          data-aos-duration="800"
-          data-aos-easing="ease-in-sine"
-          src={bg}
-          alt="bg"
-          width={1092}
-          height={358}
-        />
+
         <Image
           className="absolute z-0 mx-auto mt-[200px] mob:hidden"
           src={cont}
@@ -81,25 +78,25 @@ const HeroSection = () => {
           data-aos-easing="ease-in-sine"
         />
         <Image
-          className="absolute z-10 left-0 bottom-[-300px] mob:hidden"
+          className="absolute z-10 left-0 bottom-[-550px] mob:hidden"
           src={gradbl}
           alt="bgl"
-          width={411}
+          width={711}
           height={512}
         />
         <Image
-          className="absolute z-10 right-0 bottom-[-300px] mob:hidden"
+          className="absolute z-10 right-0 bottom-[-550px] mob:hidden"
           src={gradbr}
           alt="bgr"
-          width={411}
+          width={711}
           height={512}
         />
         <Image
-          className="absolute z-10 mx-auto bottom-[-260px]"
+          className="absolute z-10 mx-auto bottom-[-350px]"
           src={gradb}
           alt="gradb"
-          width={591}
-          height={512}
+          width={981}
+          height={912}
         />
       </div>
     </div>

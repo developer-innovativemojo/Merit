@@ -13,7 +13,7 @@ import MobCoreSlider from "./CorePrincipleSlider/MobCoreslider";
 const CorePrinciple = () => {
   return (
     <>
-      <div
+      {/* <div
         data-aos="fade-down"
         data-aos-duration="800"
         data-aos-easing="ease-in-sine"
@@ -24,7 +24,6 @@ const CorePrinciple = () => {
           align their talent and teaming efforts by leveraging historical
           knowledge, current and upcoming opportunities, and external market
           insights in one centralized, actionable platform.
-          {/* Add the background beam animation */}
           <Image
             className="w-full left-0 absolute max-w-[1000px] h-[800px] object-cover opacity-100 mx-auto bottom-[-365px] right-0 mob:top-[-3%] z-0"
             src={gradtop}
@@ -33,7 +32,7 @@ const CorePrinciple = () => {
             height={300}
           />
         </Text>
-      </div>
+      </div> */}
 
       <div className="relative px-5 z-[-4]">
         <div className="relative overflow-hidden z-[-4]">
@@ -47,29 +46,29 @@ const CorePrinciple = () => {
             width={337}
             height={236}
           />
-          <div className="mob:flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full hidden">
-            <MobCoreSlider totalSlides={6} />
-          </div>
 
           <div
-            className="max-w-[1300px] mx-auto pt-[100px] relative z-0 mob:pt-0"
+            className="max-w-[1300px] mx-auto pt-[35px] relative z-0 mob:pt-0"
             data-aos="fade-up"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
           >
             <Text
               as="h1"
-              className="text-accentGreen text-[50px] mob:text-[32px] mb-[24px] mob:leading-[40px] mob:text-center mob:mb-[60px]"
+              className="text-accentGreen text-[50px] text-center mob:text-[32px] mb-[24px] mob:leading-[40px] mob:text-center mob:mb-[60px]"
             >
               Core Principles of MERIT
             </Text>
-            <Text className="text-[24px] mob:leading-[30px] font-inter max-w-[735px]">
+            {/* <Text className="text-[24px] mob:leading-[30px] font-inter max-w-[735px]">
               At its core,{" "}
               <span className="font-bold text-[#4FB848]"> MERIT</span> is
               designed to maximize efficiency and optimize strategic
               decision-making through
-            </Text>
-            <div className="flex tab:flex-wrap w-full mt-[50px] mob:mt-[55px] items-start">
+            </Text> */}
+            <div className="flex tab:flex-wrap w-full mt-[90px] mob:mt-[55px] items-start">
+              <div className="mob:flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full hidden">
+                <MobCoreSlider totalSlides={6} />
+              </div>
               <div className="max-w-[480px] space-y-[20px] mob:space-y-[20px]">
                 <Text className="text-[24px] leading-[32px] mob:text-[18px] mob:leading-[22px] font-inter ">
                   {" "}
@@ -121,7 +120,7 @@ const CorePrinciple = () => {
             </div>
           </div>
         </div>
-        <div
+        {/* <div
           data-aos="zoom-in"
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
@@ -135,7 +134,7 @@ const CorePrinciple = () => {
             , make better decisions, and maximize their existing relationships
             and data.
           </Text>
-        </div>
+        </div> */}
       </div>
     </>
   );

@@ -28,9 +28,11 @@ const ReadyToSee = () => {
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
         >
-          <Text className="text-[45px] mob:text-[30px] mob:text-center font-bold my-[200px] mob:my-[85px]">
-            Ready to See <span className="text-accentGreen ">MERIT</span> in
-            Action?
+          <Text className="text-[45px] mob:text-[30px] max-w-[1194px] text-center leading-[50px] mob:text-center font-bold my-[200px] mob:my-[85px] px-5">
+            <span className="text-accentGreen ">
+              Ready to move faster, make smarter matches, and grow confidently?
+            </span>
+            That’s MERIT—because better matchmaking means better business.
           </Text>
         </div>
 

@@ -12,20 +12,24 @@ import ReadyToSee from "@/components/NewLanding/ReadyToSee";
 import FooterLanding from "@/components/NewLanding/FooterLanding";
 import PinnedCards from "@/components/background-beams/AnimationCards";
 import BackgroundBeamsDemo from "@/components/background-beams";
+import ThePain from "@/components/NewLanding/ThePain";
+import Internal from "@/components/NewLanding/Internal";
 export default function Home() {
   return (
     <>
       <HeroSection />
       <AboutSection />
-      <CorePrinciple />
-      <HowMerit />
+      <ThePain />
+      <HowMeritFixes />
+      {/* <HowMerit /> */}
       {/* <BackgroundBeamsDemo /> */}
-      <KeyCapabilities />
       {/* <PinnedCards /> */}
       {/* <WhyMerit /> */}
-      <HowMeritFixes />
       {/* <MeritImapct /> */}
       <Meritcapabilities />
+      {/* <KeyCapabilities /> */}
+      <CorePrinciple />
+      <Internal />
       <ComparisonTable />
       <ReadyToSee />
       <FooterLanding />

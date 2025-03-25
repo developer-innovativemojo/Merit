@@ -41,55 +41,43 @@ const HowMeritFixes = () => {
         >
           <Text
             as="h1"
-            className="text-[40px] mt-[113px] mob:my-10 text-center font-bold mob:text-[32px]"
+            className="text-[50px] mt-[113px] mob:my-10 text-center font-bold mob:text-[32px]"
           >
-            How <span className="text-accentGreen">MERIT</span> Fixes Business
-            Development—Instantly
+            How <span className="text-accentGreen">MERIT</span> Fixes It
           </Text>
           <div className="flex justify-between xl:justify-center xl:flex-wrap-reverse items-center mt-[-20px]">
             <div className="w-full max-w-[695px] mob:mt-[-100px]">
-              <ul className="text-[18px] font-inter space-y-[25px] text-black">
+              <ul className="text-[18px] font-inter space-y-[25px] text-[#30434D]">
                 <li>
-                  <span className="text-accentGreen font-semibold">
+                  <span className="text-accentGreen font-bold">
                     AI-Powered Teaming & Staffing:
                   </span>{" "}
-                  Instantly finds{" "}
-                  <strong>best-fit partners, subs, & talent</strong> for any
-                  opportunity.
+                  Quickly surfaces top-fit partners and talent using past
+                  performance, skill alignment, and agency relevance. Drop in
+                  your PWS, job descriptions, capability statements, or
+                  SOWs—MERIT does the matching instantly.
                 </li>
                 <li>
-                  <span className="text-accentGreen font-semibold">
-                    Drag & Drop Matching:
+                  <span className="text-accentGreen font-bold">
+                    Automated Scoring & Matching:
                   </span>{" "}
-                  Upload{" "}
-                  <strong>
-                    RFPs, SOWs, PWS, Job Reqs—AI scans & matches instantly.
-                  </strong>
+                  Ranks vendors and candidates based on verified performance and
+                  strategic fit—no guesswork.
                 </li>
                 <li>
-                  <span className="text-accentGreen font-semibold">
-                    Automated Scoring:
+                  <span className="text-accentGreen font-bold">
+                    Faster Proposal Staffing & Alignment:
                   </span>{" "}
-                  Ranks <strong>vendors, candidates, & teaming partners</strong>{" "}
-                  based on{" "}
-                  <strong>past performance & contract relevance.</strong>
+                  Brings BD, HR/Recruiters, and program leads onto one platform,
+                  cutting proposal response time by up to 3×.
                 </li>
                 <li>
-                  <span className="text-accentGreen font-semibold">
-                    Faster Proposal Staffing:
+                  <span className="text-accentGreen font-bold">
+                    Smarter Bid Preparation:
                   </span>{" "}
-                  Aligns <strong>internal & external talent instantly</strong>{" "}
-                  to ensure the right people are in place.
-                </li>
-                <li>
-                  <span className="text-accentGreen font-semibold">
-                    Predictive BD Intelligence:
-                  </span>{" "}
-                  Identifies{" "}
-                  <strong>
-                    future contracts & teaming opportunities before they go
-                    public.
-                  </strong>
+                  Gives BD, HR/Recruiters, and Program Managers a clearer view
+                  of who to team with and staff—before you&apos;re under
+                  pressure to respond.
                 </li>
               </ul>
             </div>
@@ -104,7 +92,7 @@ const HowMeritFixes = () => {
 
           {/* merit impact */}
 
-          <div
+          {/* <div
             data-aos="fade-down"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
@@ -125,7 +113,7 @@ const HowMeritFixes = () => {
                 </Text>
               </div>
 
-              {/* 2 */}
+          
 
               <div className="flex gap-2 w-full max-w-[470px]">
                 <Image src={twox} alt="container" />
@@ -134,7 +122,7 @@ const HowMeritFixes = () => {
                   teams, better bids.
                 </Text>
               </div>
-              {/* 3 */}
+        
               <div className="flex gap-2 w-full max-w-[470px]">
                 <Image src={threex} alt="container" />
                 <Text className="font-inter text-[18px]">
@@ -143,7 +131,7 @@ const HowMeritFixes = () => {
                 </Text>
               </div>
 
-              {/* 4 */}
+        
               <div className="flex gap-2 w-full max-w-[470px]">
                 <Image src={win} alt="container" />
                 <Text className="font-inter text-[18px]">
@@ -153,8 +141,8 @@ const HowMeritFixes = () => {
                 </Text>
               </div>
             </div>
-          </div>
-          <div
+          </div> */}
+          {/* <div
             data-aos="zoom-in"
             data-aos-duration="800"
             data-aos-easing="ease-in-sine"
@@ -165,7 +153,7 @@ const HowMeritFixes = () => {
               </span>{" "}
               gives BD teams the strategic edge to win.
             </Text>
-          </div>
+          </div> */}
         </div>
       </div>
     </div>
