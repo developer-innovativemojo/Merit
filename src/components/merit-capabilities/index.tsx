@@ -48,6 +48,10 @@ const Meritcapabilities = () => {
                   cut in manual business development tasks
                 </li>
                 <li>
+                  <span className="text-accentGreen font-semibold">2×</span>{" "}
+                  more effective teaming and hiring decisions
+                </li>
+                <li>
                   <span className="text-accentGreen font-semibold">80%</span> of
                   winning bids go to teams positioned early—MERIT delivers that
                   edge
