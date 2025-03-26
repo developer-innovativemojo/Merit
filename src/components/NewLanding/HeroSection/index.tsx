@@ -81,14 +81,14 @@ const HeroSection = () => {
           className="absolute z-10 left-0 bottom-[-550px] mob:hidden"
           src={gradbl}
           alt="bgl"
-          width={711}
+          width={611}
           height={512}
         />
         <Image
           className="absolute z-10 right-0 bottom-[-550px] mob:hidden"
           src={gradbr}
           alt="bgr"
-          width={711}
+          width={611}
           height={512}
         />
         <Image

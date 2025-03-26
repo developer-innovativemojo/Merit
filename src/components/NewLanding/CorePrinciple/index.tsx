@@ -65,7 +65,7 @@ const CorePrinciple = () => {
               designed to maximize efficiency and optimize strategic
               decision-making through
             </Text> */}
-            <div className="flex tab:flex-wrap w-full mt-[90px] mob:mt-[55px] items-start">
+            <div className="flex tab:flex-wrap w-full mt-[90px] mob:mt-[55px] items-start gap-[20px]">
               <div className="mob:flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full hidden">
                 <MobCoreSlider totalSlides={6} />
               </div>
@@ -75,16 +75,14 @@ const CorePrinciple = () => {
                   <span className="text-[#4FB848] font-bold">
                     M – Matching:
                   </span>{" "}
-                  Optimizing connections across processes, systems, and
-                  resources to ensure the best outcomes.
+                  AI-driven connections across talent pools and partner networks
                 </Text>
                 <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     E – Efficiency:
                   </span>{" "}
-                  Streamlining workflows and decision-making through data-driven
-                  solutions and technology.​
+                  Streamlined workflows that save time and cost
                 </Text>
 
                 <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
@@ -92,8 +90,7 @@ const CorePrinciple = () => {
                   <span className="text-[#4FB848] font-bold">
                     R – Results:{" "}
                   </span>
-                  Delivering measurable, impactful solutions that align with
-                  organizational goals and objectives.​
+                  Measurable outcomes aligned to strategic objectives
                 </Text>
 
                 <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
@@ -101,16 +98,14 @@ const CorePrinciple = () => {
                   <span className="text-[#4FB848] font-bold">
                     I – Innovation:
                   </span>{" "}
-                  Leveraging cutting-edge tools and strategies to modernize
-                  operations and improve performance.​
+                  Cutting-edge strategies that modernize your BD
                 </Text>
                 <Text className="text-[24px] leading-[32px] mob:leading-[22px] font-inter mob:text-[18px]">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     T – Technology:
                   </span>{" "}
-                  Harnessing advanced platforms and AI to automate and enhance
-                  matching processes across industries.
+                  Automated, real-time collaboration for precise matching
                 </Text>
               </div>
 
