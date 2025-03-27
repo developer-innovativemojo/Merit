@@ -20,9 +20,10 @@ const content = [
 
 const ThePain = () => {
   return (
-    <div className="w-full flex justify-center min-h-[878px] the-pain-bg mob:px-5">
+    <div className="w-full flex justify-center min-h-[878px] the-pain-bg mob:px-5 relative">
+      <div className=" absolute h-full w-full bg-[#D0D5DD] bg-opacity-5"></div>
       <div
-        className="w-full max-w-[1146px] min-h-[600px] pb-[39px]"
+        className="w-full max-w-[1146px] min-h-[600px] pb-[39px] relative"
         style={{
           backgroundImage: "url('/images/new-landing/whymerit.png')",
           backgroundSize: "cover",
