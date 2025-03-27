@@ -30,24 +30,36 @@ const HeroSection = () => {
               as="h1"
               className="relative text-center font-inter text-[#30434D] mob:text-[32px] mob:leading-[40px] z-10"
             >
-              The
+              <span className="text-accentGreen">MERIT:</span>
               <span className="relative aurora-text">
                 {" "}
-                Smartest, Fastest Way
+                Empowering Teams
               </span>{" "}
-              to Find the Right <br className="mob:hidden" />
-              Partners & Resources to Win More Work
+              with Smart <br className="mob:hidden" /> Connections
             </Text>
           </div>
 
           {/* mob arrow images */}
-          <div className="mob:flex justify-center gap-[30px] w-full mt-[16px] hidden">
-            <Image className="w-[158px]" src={right} alt="bg" />
-            <Image className="w-[155px]" src={left} alt="bg" />
+          <div className="flex justify-center items-start gap-[30px] mt-[34px] w-full ">
+            <Image
+              className="mob:w-[158px] w-full max-w-[327px]"
+              src={right}
+              alt="bg"
+            />
+            <Text className="text-accentGreen text-center font-bold text-[20px] mob:max-w-[365px] font-inter mob:hidden">
+              Build Winning Teams Effortlessly with Our AI-Powered,{" "}
+              <br className="mob:hidden" /> Data-Driven Platform
+            </Text>
+
+            <Image
+              className="mob:w-[158px] w-full max-w-[327px]"
+              src={left}
+              alt="bg"
+            />
           </div>
           {/* mob arrow images */}
 
-          <Text className="text-accentGreen text-center mt-[34px] font-bold text-[20px] mob:max-w-[365px] font-inter">
+          <Text className="text-accentGreen text-center mt-[34px] font-bold text-[20px] mob:max-w-[365px] font-inter hidden mob:block">
             Faster Teaming. Smarter Matches. Better Business.
           </Text>
 
@@ -67,7 +79,7 @@ const HeroSection = () => {
 
         {/* ALL IMAGES ARE KEPT INTACT */}
 
-        <Image
+        {/* <Image
           className="absolute z-0 mx-auto mt-[200px] mob:hidden"
           src={cont}
           alt="bg"
@@ -76,7 +88,7 @@ const HeroSection = () => {
           data-aos="fade-down"
           data-aos-duration="800"
           data-aos-easing="ease-in-sine"
-        />
+        /> */}
         <Image
           className="absolute z-10 left-0 bottom-[-550px] mob:hidden"
           src={gradbl}

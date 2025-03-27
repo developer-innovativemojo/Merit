@@ -8,7 +8,7 @@ import Text from "@/components/ui/Text";
 const AboutSection = () => {
   return (
     <div
-      className="flex items-center justify-center relative mt-[143px] mob:mt-[10px] mb-[120px]"
+      className="flex items-center justify-center relative mt-[86px] mob:mt-[10px] mb-[80px]"
       // style={{
       //   backgroundImage: `url(${bg.src})`,
       //   backgroundSize: "cover",
@@ -21,18 +21,18 @@ const AboutSection = () => {
         src={bg}
         alt=""
       />
-      <Image
+      {/* <Image
         className="absolute z-[0] object-cover w-full max-w-[1050px] bottom-[-100px] mob:bottom-0 mob:top-[-222px]"
         src={greenbg}
         alt=""
-      />
+      /> */}
       <div
-        className="w-full max-w-[1200px]"
+        className="w-full max-w-[1200px] flex justify-center items-center"
         data-aos="fade-up"
         data-aos-duration="800"
         data-aos-easing="ease-in-sine"
       >
-        <div className="max-w-[993px] w-full mx-auto flex flex-col justify-between gap-[48px] items-center mob:justify-center mob:gap-0">
+        <div className="w-full max-w-[1100px] flex mob:flex-col justify-between gap-[48px] items-center mob:justify-center mob:gap-0">
           <Text
             as="h1"
             className="text-accentGreen text-[50px] mob:text-[32px] font-inter mob:text-center mob:mt-10"
@@ -40,18 +40,33 @@ const AboutSection = () => {
             About
           </Text>
           <Image className=" mob:block hidden" src={bg} alt="" />
-
-          <Text className="max-w-full w-full text-center font-inter text-[#30434D] text-[18px] leading-[26px] mob:px-5">
-            <strong> MERIT</strong> is an AI-driven business intelligence
-            platform built for{" "}
-            <strong>
-              {" "}
-              Business Development (BD), HR/Recruiters, and Program Management{" "}
-            </strong>{" "}
-            teams. It reduces friction, eliminates wasted time, and connects the
-            right people at the right time—so teams can win more contracts and
-            execute without delays.
-          </Text>
+          <div className="w-full max-w-[785px]">
+            <Text className="max-w-full w-full font-inter text-[#30434D] text-[18px] leading-[26px] mob:px-5">
+              In Business Development (BD), Human Resources (HR), or Program
+              Delivery, your expertise drives success. Yet, traditional methods
+              can be time-consuming and challenging. <br /> <br />
+              <strong> MERIT</strong> serves as your{" "}
+              <strong>AI-powered business development partner,</strong> designed
+              to streamline team-building by instantly connecting you with
+              top-fit partners and talent using real data. This enables you to
+            </Text>{" "}
+            <br />
+            <br />
+            <ul className="list-disc font-inter font-bold text-[18px] text-[#30434D] pl-7 mob:pl-10">
+              <li>
+                Swiftly Assemble High-Performing Teams with AI-Powered
+                Matching.​
+              </li>
+              <li>
+                Enhance Contract Staffing by Intelligently Identifying Top
+                Candidates.​
+              </li>
+              <li>
+                Ensure Program Success by Precisely Aligning Talent with Project
+                Needs.
+              </li>
+            </ul>
+          </div>
         </div>
       </div>
     </div>
