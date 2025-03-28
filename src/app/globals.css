@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+  scroll-behavior: smooth;
+}
+
 /* Custom utilities and overrides */
 @layer utilities {
   .text-balance {
@@ -247,8 +251,17 @@ body {
 .mySwiper .swiper-pagination-bullet {
   width: 8px; /* default width */
   height: 8px;
+  position: relative;
+  bottom: 195px;
   background: #30434d;
   transition: width 0.3s ease; /* smooth transition */
+}
+
+/* Mobile View (max-width 768px) */
+@media (max-width: 768px) {
+  .mySwiper .swiper-pagination-bullet {
+    bottom: 0; /* Set bottom to 0 in mobile view */
+  }
 }
 
 .mySwiper .swiper-pagination-bullet-active {

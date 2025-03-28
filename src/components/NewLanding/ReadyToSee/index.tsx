@@ -36,7 +36,10 @@ const ReadyToSee = () => {
           </Text>
         </div>
 
-        <div className="w-full bg-[#30434D] min-h-[953px] mob:min-h-[1682px] px-5 flex justify-center items-center mob:py-[30px]">
+        <div
+          className="w-full bg-[#30434D] min-h-[953px] mob:min-h-[1682px] px-5 flex justify-center items-center mob:py-[30px]"
+          id="contact"
+        >
           <div className="w-full max-w-[1220px] flex flex-wrap justify-between items-center xl:justify-center xl:gap-[80px]">
             <div>
               <div
