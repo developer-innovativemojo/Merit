@@ -24,7 +24,7 @@ const TestimonialSliderMob: React.FC<TestimonialSliderMobProps> = ({
   const swiperRef = useRef<any>(null);
 
   return (
-    <div className="w-full h-full pb-[58px] mob:pb-[60px] relative z-10">
+    <div className="w-full h-full  mob:pb-[60px] relative z-10">
       <div className="flex justify-center w-full">
         <div className="w-full max-w-[800px] coreswiperslider">
           <Swiper

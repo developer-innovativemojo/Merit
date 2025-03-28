@@ -31,7 +31,7 @@ const ThePain = () => {
           backgroundPosition: "center",
         }}
       >
-        <Text className="mt-[10px] text-[50px] mob:text-[32px] mob:mt-[30px] font-bold text-center font-inter text-white mb-[10px]">
+        <Text className="mt-[50px] text-[50px] mob:text-[32px] mob:mt-[30px] font-bold text-center font-inter text-white mb-[10px]">
           The Cost of Traditional Methods
         </Text>
         <Text className="text-[24px] text-white font-bold text-center mb-[48px]">

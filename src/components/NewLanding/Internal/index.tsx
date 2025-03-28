@@ -10,7 +10,7 @@ const Internal = () => {
   return (
     <div className="w-full flex flex-col justify-center items-center relative">
       <Image src={grad} alt="grad" className="absolute left-0" />
-      <Text className="font-inter text-[50px] mob:text-[32px] mob:leading-[40px] w-full text-center  my-[120px] mob:my-[80px] text-[#30434D] font-bold">
+      <Text className="font-inter text-[50px] mob:text-[32px] mob:leading-[40px] w-full text-center  mb-[120px] mob:my-[80px] text-[#30434D] font-bold">
         Internal & External{" "}
         <span className="text-accentGreen"> Talent Optimization</span>
       </Text>

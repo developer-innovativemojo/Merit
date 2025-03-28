@@ -8,7 +8,7 @@ import grad from "@/public/images/new-landing/gradbr.png";
 
 export const ComparisonTable: React.FC = () => {
   return (
-    <div className="relative w-full">
+    <div className="relative w-full" id="howmeritcompares">
       <Image src={grad} alt="grad" className="absolute right-0 top-[-450px]" />
       <div className="max-w-[1340px] mx-auto mob:px-5 mt-[200px] relative mob:mt-[103px]">
         <div

@@ -38,7 +38,7 @@ const Navbar = () => {
       <nav className=" top-[0px]  z-50 w-full">
         <div className="flex justify-center items-center w-full ">
           <div className="relative bg-[#30434D] mob:bg-transparent rounded-[50px] max-w-[1276px] min-h-[108px] mob:min-h-full mob:mt-[58px] w-full flex flex-wrap items-center justify-between mx-auto mt-[61px] mob:rounded-[0px] ">
-            <div className="flex items-center justify-between w-full gap-[35px] px-[83px] mob:px-8 ">
+            <div className="flex items-center justify-between w-full gap-[35px] mx-auto max-w-[949px] mob:px-8 ">
               <Link href="/" className=" mob:w-[140px] ">
                 <Image
                   src={logo}
@@ -89,7 +89,7 @@ const Navbar = () => {
                   <ul className="font-normal mob:absolute mob:top-[100px] items-center mob:px-4 mob:left-0 mob:w-full z-50 flex  py-4  gap-[37px] md:flex-row rtl:space-x-reverse md:mt-0 tab:bg-black">
                     <li>
                       <Link
-                        href="#"
+                        href="/#about"
                         // onClick={() => setActiveTab("/who-we-are")}
                         className={`block text-[18px] font-inter font-bold leading-[26px] ${
                           currentPath === "#"
@@ -102,7 +102,7 @@ const Navbar = () => {
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/#corePrinciple"
                         // onClick={() => setActiveTab("/who-we-are")}
                         className={`block text-[18px] font-inter font-bold leading-[26px] ${
                           currentPath === "#"
@@ -110,12 +110,12 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                        How MERIT Works
+                        Core Principles
                       </Link>
                     </li>
                     <li>
                       <Link
-                        href="#"
+                        href="/#howmeritcompares"
                         // onClick={() => setActiveTab("/who-we-are")}
                         className={`block text-[18px] font-inter font-bold leading-[26px] ${
                           currentPath === "#"
@@ -123,10 +123,10 @@ const Navbar = () => {
                             : "text-white"
                         }`}
                       >
-                        Capabilities
+                        How MERIT Compares
                       </Link>
                     </li>
-                    <li>
+                    {/* <li>
                       <Link
                         href="#"
                         // onClick={() => setActiveTab("/who-we-are")}
@@ -138,10 +138,12 @@ const Navbar = () => {
                       >
                         Why MERIT?
                       </Link>
-                    </li>
-                    <Button className="bg-[#4FB848] rounded-[20px] max-w-[137px] h-[44px]">
-                      Sign up
-                    </Button>
+                    </li> */}
+                    <Link href="/#contact">
+                      <Button className="bg-[#4FB848] rounded-[20px] max-w-[137px] h-[44px]">
+                        Contact Us
+                      </Button>
+                    </Link>
                   </ul>
                 </div>
               </div>
@@ -172,28 +174,25 @@ const Navbar = () => {
                 <Drawer isOpen={isOpen} onClose={onClose}>
                   <ul className="font-normal w-full z-50 flex flex-col py-4 gap-0">
                     {[
-                      "#About",
-                      "#How MERIT Works",
-                      "#Capabilities",
-                      "#Why MERIT?",
-                      "#Sign up",
-                    ].map((path) => (
+                      { id: "#about", label: "About" },
+                      { id: "#corePrinciple", label: "Core Principles" },
+                      { id: "#howmeritcompares", label: "How MERIT Compares" },
+                      { id: "#contact", label: "Contact Us" },
+                    ].map(({ id, label }) => (
                       <a
-                        href={path}
-                        key={path}
-                        // onClick={() => handleMenuClick(path)}
-                        // onClick={() => setActiveTab(path)}
+                        href={id}
+                        key={id}
+                        onClick={onClose} // Close drawer when clicked
                         className={`block text-[20px] font-montserrat font-medium leading-[25.5px] ${
-                          currentPath === path
+                          currentPath === id
                             ? "text-accentGreen font-semibold"
                             : "text-[#FFFFFF]"
                         }`}
                       >
                         <li className="flex justify-center py-[15px] list-items">
-                          {/* {path === '/' ? 'HOME' : path.slice(1).toUpperCase()} */}
-                          {path.slice(1).toUpperCase()}
+                          {label}
                         </li>
-                        <hr className="h-px  bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
+                        <hr className="h-px bg-[#C0C0C0] border-0 dark:bg-[#C0C0C0]"></hr>
                       </a>
                     ))}
                   </ul>

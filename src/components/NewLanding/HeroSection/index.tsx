@@ -33,12 +33,12 @@ const HeroSection = () => {
               <span className="text-accentGreen">MERIT:</span>
               <span className="relative aurora-text">
                 {" "}
-                Empowering Teams
+                Faster Teaming,
               </span>{" "}
-              with Smart <br className="mob:hidden" /> Connections
+              Smarter Matches,
+              <br className="mob:hidden" /> Seamless Execution
             </Text>
           </div>
-
           {/* mob arrow images */}
           <div className="flex justify-center items-start gap-[30px] mt-[34px] w-full ">
             <Image
@@ -58,11 +58,9 @@ const HeroSection = () => {
             />
           </div>
           {/* mob arrow images */}
-
           <Text className="text-accentGreen text-center mt-[34px] font-bold text-[20px] mob:max-w-[365px] font-inter hidden mob:block">
             Faster Teaming. Smarter Matches. Better Business.
           </Text>
-
           {/* mob green image */}
           <Image
             className="block mx-auto mt-[43px]"
