@@ -34,7 +34,7 @@ const CorePrinciple = () => {
         </Text>
       </div> */}
 
-      <div className="relative px-5 z-[-4]">
+      <div className="relative px-5 z-[-4]" id="corePrinciple">
         <div className="relative overflow-hidden z-[-4]">
           {/* Background beams animation */}
           {/* <BackgroundBeams className="absolute inset-0 h-full w-full z-0" /> */}
@@ -55,7 +55,7 @@ const CorePrinciple = () => {
           >
             <Text
               as="h1"
-              className="text-accentGreen text-[50px] text-center mob:text-[32px] mb-[24px] mob:leading-[40px] mob:text-center mob:mb-[60px]"
+              className="text-accentGreen text-[50px] text-center mob:text-[32px] mb-[24px] mob:leading-[40px] mob:text-center mob:mb-[0px]"
             >
               Core Principles of MERIT
             </Text>
@@ -65,12 +65,12 @@ const CorePrinciple = () => {
               designed to maximize efficiency and optimize strategic
               decision-making through
             </Text> */}
-            <div className="flex tab:flex-wrap w-full mt-[90px] mob:mt-[55px] items-start gap-[20px]">
+            <div className="flex tab:flex-wrap w-full mt-[90px] items-start gap-[20px] mob:mt-0">
               <div className="mob:flex tab:flex-wrap tab:justify-center items-center w-full mob:h-full hidden">
                 <MobCoreSlider totalSlides={6} />
               </div>
               <div className="max-w-[480px] space-y-[20px] mob:space-y-[20px]">
-                <Text className="text-[24px] leading-[32px] mob:text-[18px] mob:leading-[22px] font-inter ">
+                <Text className="text-[24px] leading-[32px] mob:text-[18px] font-inter ">
                   {" "}
                   <span className="text-[#4FB848] font-bold">
                     M – Matching:

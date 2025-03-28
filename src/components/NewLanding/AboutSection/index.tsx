@@ -9,6 +9,7 @@ const AboutSection = () => {
   return (
     <div
       className="flex items-center justify-center relative mt-[86px] mob:mt-[10px] mb-[80px]"
+      id="about"
       // style={{
       //   backgroundImage: `url(${bg.src})`,
       //   backgroundSize: "cover",
