@@ -1,0 +1,303 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+html {
+  scroll-behavior: smooth;
+}
+
+/* Custom utilities and overrides */
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Define a custom border utility */
+  .border-border {
+    border: 1px solid hsl(var(--border));
+  }
+
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+}
+@layer base {
+  * {
+    @apply border-border;
+  }
+}
+
+.gradientKeyCap {
+  background: linear-gradient(
+    359.85deg,
+    #30434d 21.43%,
+    #30434d 41.71%,
+    #364f4d 64.4%,
+    rgba(81, 129, 78, 0.7) 79.96%,
+    rgba(80, 157, 75, 0.9) 92.8%,
+    #4fb848 99.89%
+  );
+}
+
+.ready-to-see {
+  background: linear-gradient(
+    90deg,
+    #4fb848 4.18%,
+    rgba(82, 231, 72, 0.8) 97.32%
+  );
+  backdrop-filter: blur(126.66666412353516px);
+}
+
+.aurora-text {
+  background: linear-gradient(90deg, #4fb848 18.45%, #30434d 63.82%);
+  background-size: 200% 200%;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: auroraMove 8s infinite linear;
+}
+
+@keyframes auroraMove {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+/* From Uiverse.io by SelfMadeSystem */
+/*
+More comprehensive version at shenanigans.shoghisimon.ca/collection/css-rain-bg/
+ */
+.container::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 1;
+  backdrop-filter: blur(1em) brightness(6);
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    #0000 0,
+    #0000 2px,
+    hsl(0 0 4%) 2px
+  );
+  background-size: 8px 8px;
+}
+
+.scroll-shadows {
+  /* max-height: 200px; */
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+  overflow-scrolling: touch;
+  background:
+    /* Shadow Cover TOP */ linear-gradient(
+        rgb(122, 31, 31) 30%,
+        rgba(131, 30, 30, 0)
+      )
+      center top,
+    /* Shadow Cover BOTTOM */
+      linear-gradient(rgb(122, 31, 31) 30%, rgba(131, 30, 30, 0)) center bottom,
+    /* Shadow TOP */
+      radial-gradient(
+        farthest-side at 50% 0,
+        rgb(122, 31, 31) 30%,
+        rgba(131, 30, 30, 0)
+      )
+      center top,
+    /* Shadow BOTTOM */
+      radial-gradient(
+        farthest-side at 50% 100%,
+        rgb(122, 31, 31) 30%,
+        rgba(131, 30, 30, 0)
+      )
+      center bottom;
+  background-repeat: no-repeat;
+  background-size: 100% 40px, 100% 40px, 100% 14px, 100% 14px;
+  background-attachment: local, local, scroll, scroll;
+}
+
+/* Not important to the functionality, just for this particular demo */
+.scroll-shadows {
+  list-style: none;
+  padding-right: 0.5rem;
+}
+
+.scroll-shadows {
+  --scrollbarBG: transparent;
+  --thumbBG: #90a4ae;
+  scrollbar-width: thin;
+  scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.scroll-shadows::-webkit-scrollbar {
+  width: 6px;
+}
+.scroll-shadows::-webkit-scrollbar-track {
+  background: var(--scrollbarBG);
+}
+.scroll-shadows::-webkit-scrollbar-thumb {
+  background-color: var(--thumbBG);
+  border-radius: 6px;
+  border: 3px solid var(--scrollbarBG);
+}
+
+@layer base {
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    /* Optionally apply global background and text colors */
+    /* @apply bg-background text-foreground; */
+  }
+}
+
+.aos-animate {
+  z-index: 10 !important;
+}
+
+.key-cap-grad {
+  background: linear-gradient(180deg, #4fb848 0%, #235220 100%);
+}
+
+body {
+  background: linear-gradient(
+    180deg,
+    #ffffff 4.05%,
+    #ffffff 13.89%,
+    #edeff2 21.35%,
+    #f2f4f7 74.26%,
+    #f2f4f7 79.63%,
+    #709cb3 100%
+  );
+}
+
+/* styles/scrollbar.css */
+.custom-scrollbar::-webkit-scrollbar {
+  height: 98px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: red;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background-color: red;
+  border-radius: 8px;
+  border: 2px solid red;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background-color: red;
+}
+.custom-scrollbar {
+  scrollbar-gutter: stable;
+}
+
+/* Firefox */
+.custom-scrollbar {
+  overflow-x: scroll; /* or auto, if preferred */
+  scrollbar-gutter: stable;
+}
+
+.custom-scrollbar {
+  scrollbar-width: 60px;
+  scrollbar-color: #4fb848 #30434d;
+}
+
+/* If you want this to apply only within your slider instance */
+.mySwiper .swiper-slide-active img {
+  box-shadow: 13px 10px 20px 0px #0000001a, -20px -3px 168px 20px #00000000;
+}
+
+/* .swiper-slide
+  .swiper-slide-visible
+  .swiper-slide-fully-visible
+  .swiper-slide-active {
+  box-shadow: 0px 24px 53px 0px #0000001a;
+  box-shadow: 0px 601px 168px 0px #00000000;
+}
+
+.coreswiperslider
+  .swiper
+  .swiper-coverflow
+  .swiper-3d
+  .swiper-initialized
+  .swiper-horizontal
+  .swiper-watch-progress
+  .mySwiper
+  .swiper-pagination
+  .swiper-pagination-clickable
+  .swiper-pagination-bullets
+  .swiper-pagination-horizontal
+  .swiper-pagination-bullet
+  .swiper-pagination-bullet-active {
+  width: 20px;
+  height: 20px;
+}
+
+.swiper-pagination-bullet-active {
+  width: 20px;
+  height: 20px;
+}
+.swiper-pagination
+  .swiper-pagination-clickable
+  .swiper-pagination-bullets
+  .swiper-pagination-horizontal {
+  background-color: red;
+} */
+
+.mySwiper .swiper-pagination-bullet {
+  width: 8px; /* default width */
+  height: 8px;
+  position: relative;
+  bottom: 195px;
+  background: #30434d;
+  transition: width 0.3s ease; /* smooth transition */
+}
+
+/* Mobile View (max-width 768px) */
+@media (max-width: 768px) {
+  .mySwiper .swiper-pagination-bullet {
+    bottom: 0; /* Set bottom to 0 in mobile view */
+  }
+}
+
+.mySwiper .swiper-pagination-bullet-active {
+  width: 20px;
+  height: 10px;
+  border-radius: 20px;
+  background: #4fb848;
+}
+
+.keycapslidermob .swiper-pagination-bullet {
+  width: 8px; /* default width */
+  height: 8px;
+  background: white;
+  transition: width 0.3s ease; /* smooth transition */
+}
+
+.keycapslidermob .swiper-pagination-bullet-active {
+  width: 20px;
+  height: 10px;
+  border-radius: 20px;
+  background: #30434d;
+}
+
+.the-pain-bg {
+  background: linear-gradient(
+    359.85deg,
+    #30434d 21.43%,
+    #30434d 41.71%,
+    #3a5856 78.07%
+  );
+}
+
+.col-gap {
+  column-gap: 170px;
+}
+
+.row-gap {
+  row-gap: 60px;
+}

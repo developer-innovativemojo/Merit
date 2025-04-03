@@ -1,0 +1,223 @@
+"use client";
+// import React, { useState } from "react";
+import Image from "next/image";
+import Link from "next/link";
+import { usePathname } from "next/navigation";
+
+import Text from "@/components/ui/Text";
+
+import logo from "@/public/images/new-landing/Logo MERIT 1.png";
+import mobdecorationlogo from "@/public/images/new-landing/footer-image.png";
+import decoration from "@/public/images/new-landing/Footer Decoration.png";
+
+const FooterLanding = () => {
+  // const [formData, setFormData] = useState({
+  //     email: "",
+  // });
+  // const [isSubmitting, setIsSubmitting] = useState(false);
+  // const [responseMessage, setResponseMessage] = useState("");
+  // const { activeTab, setActiveTab } = useTabContext();
+  const currentPath = usePathname();
+  // const handleChange = (
+  //     e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+  // ) => {
+  //     const { name, value } = e.target;
+  //     setFormData({ ...formData, [name]: value });
+  // };
+  // const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
+  //     e.preventDefault();
+  //     setIsSubmitting(true);
+
+  //     try {
+  //         const response = await fetch("/api/subscribe", {
+  //             method: "POST",
+  //             headers: {
+  //                 "Content-Type": "application/json",
+  //             },
+  //             body: JSON.stringify({
+  //                 email: formData.email,
+  //             }),
+  //         });
+
+  //         if (response.ok) {
+  //             setResponseMessage("Thank you for your submission!");
+  //             alert("You Have Subscribed successfully!");
+  //         } else {
+  //             setResponseMessage("Failed to submit. Please try again later.");
+  //         }
+  //     } catch (error) {
+  //         console.log(error);
+  //         setResponseMessage("An error occurred. Please try again.");
+  //     } finally {
+  //         setIsSubmitting(false);
+  //     }
+  // };
+
+  return (
+    <div className=" bg-white  pt-16 pb-6 px-5 mob:pb-16 mob:pt-0 relative">
+      <div className="flex justify-start items-center overflow-hidden min-h-[450px] mob:min-h-[100%] max-w-[1200px] mx-auto">
+        <div className="max-w-[964.82px] w-full flex flex-wrap gap-[55px] relative z-20 mob:flex-col mob:mt-[50px] mob:gap-[55px]">
+          <div className="flex-col w-full max-w-[280px] mr-[67px]  mob:mx-auto">
+            <div className="mt-8">
+              <Image src={logo} alt="" width={280} height={93} />
+            </div>
+          </div>
+
+          <div className="flex justify-center  gap-[55px] mob:mt-8">
+            {/* company */}
+            <div className=" mob:w-[50%] mob:flex mob:flex-wrap mob:justify-center w-full max-w-[149px]  ">
+              <Text className="text-[#30434D] mob:text-center text-[24px] font-bold font-inter mob:text-[22px] mb-[28px]">
+                Company
+              </Text>
+
+              <div className="flex flex-wrap gap-[25px] mob:flex-col">
+                <Text
+                  className={`text-[#30434D] mob:text-center leading-[25.89px] text-[18px] uppercase font-inter    font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  About Us
+                </Text>
+                <Text
+                  className={`text-[#30434D] mob:text-center leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Careers
+                </Text>
+
+                <Text
+                  className={`text-[#30434D] mob:text-center leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  News
+                </Text>
+
+                <Text
+                  className={`text-[#30434D] mob:text-center leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px] ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Contact
+                </Text>
+              </div>
+            </div>
+
+            {/* social */}
+            <div className="mob:w-[50%] mob:flex mob:flex-wrap mob:justify-center w-full max-w-[149px]  ">
+              <Text className="text-[#30434D] mob:text-center text-[24px] font-bold font-inter mob:text-[22px] mb-[28px]">
+                Social
+              </Text>
+
+              <div className="flex flex-wrap gap-[25px]">
+                <Text
+                  className={`text-[#30434D] mob:text-center w-full  leading-[25.89px] text-[18px] uppercase font-inter   font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  X
+                </Text>
+                <Text
+                  className={`text-[#30434D] mob:flex mob:text-center mob:mx-auto leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "/#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Textedin
+                </Text>
+
+                <Text
+                  className={`text-[#30434D] mob:text-center mob:mx-auto leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Facebook
+                </Text>
+
+                <Text
+                  className={`text-[#30434D] mob:text-center mob:mx-auto leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px] ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Telegram
+                </Text>
+              </div>
+            </div>
+          </div>
+
+          <div className="flex mob:gap-[35px] justify-center">
+            {/* legal */}
+            <div className="  w-full max-w-[149px] mob:mt-5 mob:w-[50%]">
+              <Text className="text-[#30434D] text-[24px] font-bold font-inter mob:text-[22px] mb-[28px] mob:text-center">
+                Legal
+              </Text>
+
+              <div className="flex flex-wrap mob:justify-center mob:flex-col gap-[25px]">
+                <Text
+                  className={`text-[#30434D] mob:text-center  leading-[25.89px] text-[18px] uppercase font-inter   font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Terms
+                </Text>
+                <Text
+                  className={`text-[#30434D] mob:text-center  leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Privacy
+                </Text>
+
+                <Text
+                  className={`text-[#30434D] mob:text-center  leading-[25.89px] text-[18px] uppercase font-inter font-normal  mob:text-[15px]  ${
+                    currentPath === "#"
+                      ? "text-accentGreen font-semibold"
+                      : "text-[#30434D]"
+                  }`}
+                >
+                  Licenses
+                </Text>
+              </div>
+            </div>
+            <Image
+              className="mob:block hidden w-[50%]"
+              src={mobdecorationlogo}
+              alt=""
+              width={415.99}
+              height={524.9}
+            />
+          </div>
+        </div>
+      </div>
+      <Image
+        className="absolute mob:relative right-0 bottom-0 h-full w-auto z-0 mob:max-w-[35%] mob:hidden"
+        src={decoration}
+        alt=""
+        width={415.99}
+        height={524.9}
+      />
+    </div>
+  );
+};
+
+export default FooterLanding;
