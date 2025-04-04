@@ -1,0 +1,434 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 0 0% 96%;
+    --foreground: 200 18% 25%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 200 18% 25%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 200 18% 25%;
+
+    --primary: 116 43% 51%;
+    --primary-foreground: 0 0% 100%;
+
+    --secondary: 200 24% 25%;
+    --secondary-foreground: 0 0% 100%;
+
+    --muted: 0 0% 96%;
+    --muted-foreground: 200 18% 46%;
+
+    --accent: 0 0% 96%;
+    --accent-foreground: 200 18% 25%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 200 18% 88%;
+    --input: 200 18% 88%;
+    --ring: 116 43% 51%;
+
+    --radius: 0.5rem;
+  }
+
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-light text-secondary font-sans antialiased;
+    min-height: 100vh;
+  }
+  
+  .btn-primary {
+    @apply bg-primary text-white px-6 py-2 rounded-md hover:bg-primary/90 transition-colors;
+  }
+  
+  .btn-secondary {
+    @apply bg-secondary text-white px-6 py-2 rounded-md hover:bg-secondary/90 transition-colors;
+  }
+  
+  .card-shadow {
+    @apply shadow-lg shadow-gray-200/50;
+  }
+  
+  /* Refined card styles */
+  .role-card {
+    @apply relative overflow-hidden transition-all duration-300 transform;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.07);
+  }
+  
+  /* Enhanced role card styles with more visual prominence */
+  .enhanced-role-card {
+    @apply relative border border-white/10;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(80, 185, 75, 0.03);
+    transition: all 0.3s ease;
+  }
+  
+  .enhanced-role-card:hover {
+    transform: translateY(-5px) scale(1.03) !important;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3), 0 0 20px rgba(80, 185, 75, 0.2) !important;
+    background-color: #30404f !important;
+  }
+  
+  /* Demo mode specific styles */
+  .demo-animated-card:hover {
+    transform: translateY(-5px) scale(1.05) !important;
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 25px rgba(80, 185, 75, 0.3) !important;
+    background-color: #354655 !important;
+  }
+  
+  /* Animation for active card during demo */
+  .active-card-animation {
+    animation: card-spotlight 1.5s ease-in-out;
+  }
+  
+  @keyframes card-spotlight {
+    0% {
+      transform: scale(1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(80, 185, 75, 0.03);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+    40% {
+      transform: scale(1.05);
+      box-shadow: 0 15px 30px rgba(0, 0, 0, 0.4), 0 0 30px rgba(80, 185, 75, 0.4);
+      border-color: rgba(80, 185, 75, 0.6);
+    }
+    80% {
+      transform: scale(1.03);
+      box-shadow: 0 12px 28px rgba(0, 0, 0, 0.35), 0 0 25px rgba(80, 185, 75, 0.3);
+      border-color: rgba(80, 185, 75, 0.4);
+    }
+    100% {
+      transform: scale(1);
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2), 0 0 15px rgba(80, 185, 75, 0.03);
+      border-color: rgba(255, 255, 255, 0.1);
+    }
+  }
+  
+  /* Try It Out button animation */
+  .try-it-button {
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .try-it-button::after {
+    content: '';
+    position: absolute;
+    inset: -2px;
+    border-radius: 9999px;
+    border: 1px solid rgba(80, 185, 75, 0.5);
+    opacity: 0;
+    animation: pulse-border 2s ease-in-out infinite;
+  }
+  
+  @keyframes pulse-border {
+    0% {
+      opacity: 0.2;
+      transform: scale(0.95);
+    }
+    50% {
+      opacity: 0.5;
+      transform: scale(1.02);
+    }
+    100% {
+      opacity: 0.2;
+      transform: scale(0.95);
+    }
+  }
+  
+  .animate-ping-subtle {
+    animation: ping-subtle 2s infinite;
+  }
+  
+  @keyframes ping-subtle {
+    75%, 100% {
+      transform: scale(1.1);
+      opacity: 0.2;
+    }
+  }
+  
+  /* Pulse corner indicator - Fix positioning */
+  .enhanced-role-card .pulse-corner {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #50B94B;
+    animation: pulse-glow 1.5s ease-in-out infinite alternate;
+  }
+  
+  .enhanced-role-card .pulse-corner::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #50B94B;
+    opacity: 0.4;
+    animation: ping 1.8s cubic-bezier(0, 0, 0.2, 1) infinite;
+  }
+  
+  @keyframes pulse-glow {
+    from { 
+      opacity: 0.6; 
+      transform: scale(1);
+    }
+    to { 
+      opacity: 1; 
+      transform: scale(1.2);
+    }
+  }
+
+  .enhanced-role-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: theme('colors.primary.DEFAULT');
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .enhanced-role-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Icon container style */
+  .icon-container {
+    @apply relative transition-all duration-300 ease-in-out;
+    width: 70px;
+    height: 70px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .enhanced-role-card:hover .icon-container {
+    transform: scale(1.08);
+  }
+  
+  .enhanced-role-card:hover .icon-container div:first-child {
+    transform: scale(1) !important;
+  }
+  
+  /* Demo completed cards with badges */
+  .demo-completed {
+    position: relative;
+  }
+  
+  .demo-completed::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border: 2px solid transparent;
+    border-radius: 0.75rem;
+    background: linear-gradient(120deg, rgba(80, 185, 75, 0.2), transparent 70%) border-box;
+    -webkit-mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask: linear-gradient(#fff 0 0) padding-box, linear-gradient(#fff 0 0);
+    mask-composite: exclude;
+    opacity: 0.7;
+    pointer-events: none;
+  }
+  
+  /* Nav item hover */
+  .nav-item {
+    @apply relative;
+  }
+  
+  .nav-item::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 2px;
+    background: theme('colors.primary.DEFAULT');
+    transform: scaleX(0);
+    transform-origin: right;
+    transition: transform 0.3s ease;
+  }
+  
+  .nav-item:hover::after {
+    transform: scaleX(1);
+    transform-origin: left;
+  }
+  
+  /* Pulse animation for CTA button */
+  .pulse-button {
+    position: relative;
+  }
+  
+  .pulse-button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    background: theme('colors.primary.DEFAULT');
+    border-radius: 9999px;
+    z-index: -1;
+    animation: pulse 2s infinite;
+    opacity: 0;
+  }
+  
+  @keyframes pulse {
+    0% {
+      transform: scale(0.95);
+      opacity: 0;
+    }
+    50% {
+      opacity: 0.2;
+    }
+    100% {
+      transform: scale(1.5);
+      opacity: 0;
+    }
+  }
+  
+  /* Principle cards styles */
+  .principle-card {
+    @apply relative overflow-hidden transition-all duration-300;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .principle-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15), 0 0 15px rgba(80, 185, 75, 0.1);
+    background-color: #30404f;
+  }
+  
+  .principle-card::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 3px;
+    background: theme('colors.primary.DEFAULT');
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  
+  .principle-card:hover::before {
+    opacity: 1;
+  }
+  
+  /* Hide scrollbar for various elements */
+  .hide-scrollbar {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+  }
+  
+  .hide-scrollbar::-webkit-scrollbar {
+    display: none;  /* Chrome, Safari, Opera */
+  }
+  
+  /* Add subtle animation for comparison checkmarks */
+  .animate-pulse-subtle {
+    animation: pulse-subtle 2s infinite ease-in-out;
+  }
+  
+  @keyframes pulse-subtle {
+    0%, 100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+    50% {
+      transform: scale(1.1);
+      opacity: 0.9;
+    }
+  }
+}
+
+@keyframes expandWidth {
+  from { width: 0; }
+  to { width: 100%; }
+}
+
+@keyframes expandHorizontal {
+  from { width: 0; }
+  to { width: 40%; }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes ping {
+  75%, 100% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+@keyframes countUp {
+  from { content: "0"; }
+  to { content: attr(data-count); }
+}
+
+@keyframes floatIn {
+  0% { opacity: 0; transform: translateY(20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.8s ease-out forwards;
+}
+
+.animate-expandHorizontal {
+  animation: expandHorizontal 1s ease-out forwards;
+}
+
+.animate-ping {
+  animation: ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite;
+}
+
+.animate-floatIn {
+  animation: floatIn 0.8s ease-out forwards;
+}
+
+.stats-item::after {
+  animation: countUp 2s forwards;
+}
+
+/* Stagger delays for elements */
+.stagger-1 { animation-delay: 0.2s; }
+.stagger-2 { animation-delay: 0.4s; }
+.stagger-3 { animation-delay: 0.6s; }
+
+@layer components {
+  /* Refined tabs styling */
+  .scrollbar-none {
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  
+  .scrollbar-none::-webkit-scrollbar {
+    display: none;
+  }
+  
+  /* Tab transition effects */
+  .tab-transition {
+    transition: all 0.2s ease-in-out;
+  }
+  
+  /* Improve focus styles for accessibility */
+  .focus-tab:focus-visible {
+    outline: 2px solid var(--primary);
+    outline-offset: -2px;
+    border-radius: 0.25rem;
+  }
+}
