@@ -44,7 +44,7 @@ const AboutSection = () => {
           <div className="w-full max-w-[785px]">
             <Text className="max-w-full w-full font-inter text-[#30434D] text-[18px] leading-[26px] mob:px-5">
               In Business Development (BD), Human Resources (HR), or Program
-              Delivery, your expertise drives success. Yet, traditional methods
+              Delivery, your expertise really drives success. Yet, traditional methods
               can be time-consuming and challenging. <br /> <br />
               <strong> MERIT</strong> serves as your{" "}
               <strong>AI-powered business development partner,</strong> designed
