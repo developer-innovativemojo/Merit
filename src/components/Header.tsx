@@ -46,12 +46,7 @@ const Header = () => {
           >
             How MERIT Compares
           </button>
-          <Button 
-            onClick={openDashboardModal}
-            className="bg-primary text-white hover:bg-primary/90 rounded-full px-6 transition-transform hover:scale-105"
-          >
-            Open Dashboard
-          </Button>
+          
           <Button 
             onClick={() => navigate('/signup')} 
             className="bg-transparent border border-white text-white hover:bg-white/10 rounded-full px-6"
