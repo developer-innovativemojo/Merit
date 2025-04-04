@@ -202,7 +202,7 @@ const ComparisonSection: React.FC<ComparisonProps> = ({ isVisible }) => {
       key={index} 
       className={`opacity-0 ${isTableVisible ? 'animate-fadeIn' : ''} hover:bg-[#243241]/80 transition-colors border-b border-white/10`}
       style={{ 
-        animationDelay: `${0.5 + (index * 0.3)}s`, 
+        animationDelay: `${0.25+ (index * 0.3)}s`, 
         animationFillMode: 'forwards',
         animationDuration: '1s'
       }}

@@ -47,7 +47,7 @@ const IndexPage = () => {
           }}
         ></div>
         
-        <div className="container mx-auto px-4 py-16 relative z-10">
+        <div className="container mx-auto px-4 py-8 md:py-16 relative z-10">
           <div id="about">
             <HeroSection isVisible={isVisible} />
             <StatsSection isVisible={isVisible} />
